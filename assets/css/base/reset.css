@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 62.5%;
+    color: #222;
+}
+
+html:lang(ko) {
+    word-break: keep-all;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* ie */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow-wrap: break-word;
+    text-size-adjust: 100%;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* chrome */
+}
+
+main {
+    display: block;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+button,
+fieldset,
+iframe,
+input,
+select,
+textarea {
+    border: 0;
+}
+
+button,
+dialog,
+input,
+mark,
+meter,
+progress {
+    background-color: transparent;
+}
+
+table {
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button,
+input,
+meter,
+progress,
+select,
+textarea {
+    appearance: none;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+iframe {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+em {
+    font-style: normal;
+}
+
+/* for Firefox */
+::-moz-placeholder {
+    opacity: 1;
+}
+
+/* for Internet Explorer */
+::-ms-clear,
+::-ms-reveal {
+    display: none;
+}
