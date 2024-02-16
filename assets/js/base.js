@@ -16,7 +16,28 @@ window.addEventListener('load', function() {
     });
 });
 
+window.device = 'mobile';
+
+
+
+function findViewType() {
+    let { innerWidth } = window
+    
+    if (innerWidth <= 390) window.device = 'mobile'
+    else if (innerWidth > 390 && innerWidth <= 834) window.device = 'tablet'
+    else window.device = 'window'
+    
+    console.log('innerWidth', innerWidth);
+    console.log('device', window.device);
+}
+
+
 // Mobile 여부 확인
 window.addEventListener('load', function() {
-    window.innerWidth
+    findViewType();
+});
+
+// ====== 창 리사이즈때마다 현재 기기가 무엇인지 판단
+window.addEventListener('resize', function() {
+    findViewType();
 });

@@ -1,0 +1,36 @@
+{
+    "editor.formatOnSave": false,
+    "eslint.codeActionsOnSave.rules": null,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "files.autoSave": "onFocusChange",
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.formats": [
+        // This is Default.
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        },
+        // {
+        //     "format": "compressed",
+        //     "extensionName": ".min.css",
+        // }
+    ],
+    
+    "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.includeItems": [
+        // 경로에 있는 .scss파일만 컴파일
+        "/assets/css/*.scss",
+        // "index.scss"
+    ],
+    
+    "liveSassCompile.settings.compileOnWatch": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "terminal.integrated.bellDuration": 3000,
+}
