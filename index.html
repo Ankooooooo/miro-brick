@@ -5,172 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RAINBOW ROBOTICS</title>
-    <link rel="stylesheet" href="/src/assets/css/swiper.min.css">
-    <link rel="stylesheet" href="/src/assets/scss/dist/css/app.css">
-    <script src="/src/assets/js/swiper.min.js"></script>
-    <script src="/src/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="/src/assets/js/jquery-ui.min.js"></script>
-    <script src="/src/assets/js/skrollr.min.js"></script>
-    <script defer src="/src/assets/js/app.js"></script>
+    <title>Miro Brick</title>
+    <script defer src="/assets/js/base.js"></script>
 </head>
 
-<body id="skroll-body" class="sub">
+<body>
     <!-- Header -->
-    <div data-include-path="/src/views/ko/components/header.html"></div>
-    <!-- !Header -->
+    <div data-include-path="/layouts/header.html"></div>
 
-    <!-- Sub header -->
-    <section class="section is-head">
-        <div class="container">
-            <div class="section__sub-head">
-                <h1 class="section__sub-title">다운로드</h1>
-                <nav class="breadcrumb" aria-label="breadcrumbs">
-                    <a href="#">홈</a>
-                    <a href="#">기술지원</a>
-                    <a class="is-active" href="#" aria-current="page">다운로드</a>
-                </nav>
-                <p class="section__head-explain">매뉴얼, 카탈로그, 기술자료 등을 확인할 수 있으며, <br>기타 문의사항은 문의하기를 통해 문의해주시기 바랍니다.</p>
-            </div>
-        </div>
+    <!-- Main -->
+    <section>
+
     </section>
-    <!-- !Sub header -->
-
-    <!-- Download -->
-    <section class="section">
-        <div class="container" id="all">
-            <div class="section__tab-wrap">
-                <div class="section__tab-inner">
-                    <a class="section__tab-btn is-active" href="#all">
-                        <span>전체</span>
-                    </a>
-                    <a class="section__tab-btn" href="#catalog">
-                        <span>카탈로그</span>
-                    </a>
-                    <a class="section__tab-btn" href="#drawing">
-                        <span>도면자료</span>
-                    </a>
-                    <a class="section__tab-btn" href="#tech">
-                        <span>기술자료</span>
-                    </a>
-                </div>
-            </div>
-            <div class="download">
-                <div class="download__column">
-                    <h2 class="download__column-title">협동로봇</h2>
-
-                    <div class="download__list-wrap" id="catalog">
-                        <h3 class="download__list-title">카탈로그</h3>
-                        <ul class="download__list">
-                            <li class="download__item">
-                                <strong class="download__item-title">RB시리즈 매뉴얼</strong>
-                                <div class="download__btn-wrap">
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/manual/[메뉴얼_국문]_RB_Manual_v3.2.1.pdf">다운로드</a>
-                                </div>
-                            </li>
-                            <li class="download__item">
-                                <strong class="download__item-title">RB시리즈 카탈로그</strong>
-                                <div class="download__btn-wrap">
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/catalog/RB_시리즈_카달로그(국문).zip">다운로드</a>
-                                </div>
-                            </li>
-                            <li class="download__item">
-                                <strong class="download__item-title">MIXX 카탈로그 </strong>
-                                <div class="download__btn-wrap">
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/catalog/MIXX_카탈로그.pdf">다운로드</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="download__list-wrap" id="drawing">
-                        <h3 class="download__list-title">도면자료</h3>
-                        <ul class="download__list">
-                            <li class="download__item">
-                                <strong class="download__item-title">RB3-1200</strong>
-                                <div class="download__btn-wrap">
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/RB3-1200_2D_Drawing.zip">2D도면</a>
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/RB3-1200_3D_Drawing.zip">3D모델링</a>
-                                </div>
-                            </li>
-                            <li class="download__item">
-                                <strong class="download__item-title">RB5-850</strong>
-                                <div class="download__btn-wrap">
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/RB5-850_2D_Drawing.zip">2D도면</a>
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/RB5-850_3D_Drawing.zip">3D모델링</a>
-                                </div>
-                            </li>
-                            <li class="download__item">
-                                <strong class="download__item-title">RB10-1300</strong>
-                                <div class="download__btn-wrap">
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/RB10-1300_2D_Drawing.zip">2D도면</a>
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/RB10-1300_3D_Drawing.zip">3D모델링</a>
-                                </div>
-                            </li>
-                            <li class="download__item">
-                                <strong class="download__item-title">핸드 컨트롤러</strong>
-                                <div class="download__btn-wrap">
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/Hand_controller_2D_Drawing.zip">2D도면</a>
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/Hand_controller_3D_Drawing.zip">3D모델링</a>
-                                </div>
-                            </li>
-                            <li class="download__item">
-                                <strong class="download__item-title">스탠드 컨트롤 박스</strong>
-                                <div class="download__btn-wrap">
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/Contol_box-stand_type_2D.zip">2D도면</a>
-                                    <a class="download__btn" target="_blank"
-                                        href="../download/drawing/Contol_box-stand_type_3D.zip">3D모델링</a>
-                                </div>
-                            </li>
-                            <!-- <li class="download__item">
-                  <strong class="download__item-title">DC 컨트롤 박스</strong>
-                  <div class="download__btn-wrap">
-                    <a class="download__btn" href="#">2D도면</a>
-                    <a class="download__btn" href="#">3D모델링</a>
-                  </div>
-                </li> -->
-                        </ul>
-                    </div>
-                    <div class="download__list-wrap" id="tech">
-                        <h3 class="download__list-title">기술자료</h3>
-                        <ul class="download__list">
-                            <li class="download__item">
-                                <strong class="download__item-title">기술 자료는 로그인 후 열람이 가능합니다 (회원만 접근 가능)</strong>
-                                <a class="shortcut-btn" href="#">사용자 공간 바로가기</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="download__column">
-                    <h2 class="download__column-title">천문제품</h2>
-                    <div class="download__guide-wrap">
-                        <p class="download__guide-text">천문제품 기술 자료는 Rainbow Astro 홈페이지에서 다운받으실 수 있습니다.</p>
-                        <a class="blank-btn" href="http://www.rainbowastro.com/ko/manual/" target="_blank">바로가기</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- !Download -->
 
     <!-- Footer -->
-    <div data-include-path="/src/views/ko/components/footer.html"></div>
-    <!-- !Footer -->
-
-    <button class="scroll-top-btn">제일 위로 이동하기</button>
+    <div data-include-path="/layouts/footer.html"></div>
 </body>
 
 </html>
