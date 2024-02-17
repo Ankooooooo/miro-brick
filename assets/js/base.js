@@ -72,7 +72,11 @@ function setSelectedNaviation(title) {
 
 window.addEventListener('load', function() {
     findViewPort();
-    includePath(showViewport);
+    includePath(() => {
+        showViewport();
+        setHeaderTitle(window.title);
+        setSelectedNaviation(window.subTitle);
+    });
 });
 
 window.addEventListener('resize', function() {
