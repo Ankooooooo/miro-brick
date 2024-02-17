@@ -1,12 +1,12 @@
 /* base */
 @import "./base/reset.scss";
-@import "./base/color.scss";
+@import "./base/variables.scss";
+@import "./base/icons.scss";
 
-
-@import "./color.scss";
 
 /* layout */
 @import "./layouts/header.scss";
 @import "./layouts/footer.scss";
 @import "./layouts/category.scss";
+@import "./layouts/navigation.scss";
 

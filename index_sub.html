@@ -12,10 +12,7 @@
 
 <body>
     <!-- Header -->
-    <div data-include-path="/layouts/header.html"></div>
-
-    <!-- Navigation -->
-    <div data-include-path="/layouts/navigation.html"></div>
+    <div data-include-path="/layouts/subHeader.html"></div>
 
     <!-- Main -->
     <main style="height: 200px;">
@@ -26,7 +23,10 @@
     <div data-include-path="/layouts/footer.html"></div>
 </body>
 
-</html>
-
 <script>
+    setTimeout(() => {
+        setHeaderTitle('시공갤러리');
+    }, 500);
 </script>
+
+</html>

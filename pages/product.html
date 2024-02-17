@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miro Brick - 제품</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <script defer src="../assets/js/base.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div data-include-path="/layouts/header.html"></div>
+
+    <!-- Navigation -->
+    <div data-include-path="/layouts/navigation.html"></div>
+
+    <!-- Sub Navigation -->
+    <section class="navigation sub">
+        <ul class="navigation__list">
+            <li class="navigation__item" label="적고타일 (파벽)">적고타일 (파벽)</li>
+            <li class="navigation__item selected" label="청고타일 (파벽)">청고타일 (파벽)</li>
+            <li class="navigation__item" label="백고타일 (파벽)">백고타일 (파벽)</li>
+            <li class="navigation__item" label="적고벽돌">적고벽돌</li>
+            <li class="navigation__item" label="청고벽돌">청고벽돌</li>
+            <li class="navigation__item" label="백고벽돌">백고벽돌</li>
+        </ul>
+    </section>
+
+    <!-- Main -->
+    <main style="height: 200px;">
+
+    </main>
+
+    <!-- Footer -->
+    <div data-include-path="/layouts/footer.html"></div>
+</body>
+
+</html>
+
+<script>
+    setTimeout(async () => {
+        setHeaderTitle('제품');
+        setSelectedNaviation('고벽돌');
+    }, 500);
+
+    
+</script>

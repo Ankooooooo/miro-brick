@@ -1,0 +1,116 @@
+.navigation {
+    display: flex;
+    width: 100%;
+
+    // MO
+    @media screen and (max-width: #{$breakpoint-tablet}) {
+        padding: 0 20px;
+    }
+
+    // Tablet
+    @media screen and (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-pc}) {
+        padding: 0 28px;
+    }
+
+    // MO and Tablet
+    @media screen and (max-width: #{$breakpoint-pc}) {
+        height: 48px;
+    }
+
+    // PC
+    @media screen and (min-width: #{$breakpoint-pc}) {
+        height: 60px;
+        justify-content: center;
+    }
+
+    .navigation__list {
+        display: flex;
+        justify-content: space-between;
+
+        align-items: center;
+        overflow-x: auto;
+
+        // MO and Tablet
+        @media screen and (max-width: #{$breakpoint-pc}) {
+            gap: 20px;
+            width: 100%;
+        }
+        
+        // PC
+        @media screen and (min-width: #{$breakpoint-pc}) {
+            width: $breakpoint-pc;
+        }
+
+        .navigation__item {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 21.17px;
+            text-align: center;
+            color: var(--gray-111);
+            min-width: fit-content;
+            cursor: pointer;
+
+            // PC
+            @media screen and (min-width: #{$breakpoint-pc}) {
+                font-size: 16px;
+                line-height: 23.17px;
+            }
+            
+            &.selected {
+                font-weight: 700;
+                color: var(--primary)   
+            }
+        }
+    }
+}
+
+.sub.navigation {
+    padding: 0;
+
+     @media screen and (max-width: #{$breakpoint-pc}) {
+         height: fit-content;
+     }
+
+
+    .navigation__list {
+        gap: 28px;
+        background-color: #F6F6F6;
+        justify-content: flex-start;
+        padding: 0 20px;
+
+        // MO
+        @media screen and (max-width: #{$breakpoint-tablet}) {
+            padding: 12px 20px;
+            flex-wrap: wrap;
+        }
+
+        // Tablet
+        @media screen and (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-pc}) {
+            padding: 12px 28px;
+            flex-wrap: wrap;
+        }
+
+        .navigation__item {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18.17px;
+
+            // MO
+            @media screen and (max-width: #{$breakpoint-tablet}) {
+                width: 45%;
+                text-align: left;
+            }
+            
+            // Tablet
+            @media screen and (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-pc}) {
+                width: 22.2%;
+                text-align: left;
+            }
+            // PC
+            @media screen and (min-width: #{$breakpoint-pc}) {
+                font-size: 14px;
+                line-height: 20.17px;
+            }
+        }
+    }
+}

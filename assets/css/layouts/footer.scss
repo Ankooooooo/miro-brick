@@ -1,20 +1,113 @@
 .footer {
     background-color: #F6F6F6;
-    height: 510px;
+    // height: 510px;
     display: flex;
     justify-content: center;
-
+    
     .footer__inner {
         width: 1312px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        padding: 40px 0 80px;
+   
+        // MO
+        @media screen and (max-width: #{$breakpoint-tablet}) {
+            flex-direction: column;
+            padding: 40px 20px;
+        }
+
+        // Tablet
+        @media screen and (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-pc}) {
+            flex-direction: column;
+            padding: 40px 28px;
+        }
+    }
+    
+    .footer__content {
+        // Mo and Tablet
+        @media screen and (max-width: #{$breakpoint-pc}) {
+            margin-bottom: 36px;
+        }
+
+        // tablet
+        @media screen and (min-width: #{$breakpoint-pc}) {
+            img {
+                width: 80px;
+                height: 70px;
+            } 
+        }
+
     }
 
-    .footer__content {
+    .footer__content-title {
+        font-weight: 700;
+        line-height: 18px;
+        margin: 36px 0 12px;
+        display: block;
+        cursor: pointer;
+        color: var(--gray-666);
 
+        // Mo 360px
+        @media screen and (max-width: 360px) {
+            font-size: 15px;
+            line-height: 16px;
+        }
+
+        &:after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7.5L6 4.5L9 7.5' stroke='%23666666' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+    }
+
+    .footer__content-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: var(--gray-666);
+
+        li {
+            display: flex;
+        }
+
+        .info__title {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+        }
+
+        .info__content {
+            font-size: 12px;
+            line-height: 16px;
+            margin-left: 6px;
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+        color: var(--gray-666);
+        margin-top: 12px;
+        display: inline-block;
+        line-height: 16px;
+        font-family: 'Roboto';
     }
 
     .footer__icon {
+        display: flex;
+        gap: 12px;
 
+        .circle__gray {
+            border: 1px solid #D2D2D2;
+            border-radius: 999px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
