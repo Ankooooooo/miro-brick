@@ -3,7 +3,7 @@ header {
     justify-content: center;
 
     // MO and Tablet
-    @media screen and (max-width: #{$breakpoint-pc}) {
+    @media screen and (max-width: #{$breakpoint-pc - 1px}) {
         height: 52px;
         
         img {
@@ -23,13 +23,13 @@ header {
         justify-content: space-between;
 
         // MO
-        @media screen and (max-width: #{$breakpoint-tablet}) {
+        @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
             align-items: center;
             padding: 0 12px 0 20px;
         }
 
         // Tablet
-        @media screen and (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-pc}) {
+        @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
             align-items: center;
             padding: 0 20px 0 28px;
         }
@@ -74,6 +74,18 @@ header {
 }
 
 .header.sub {
+    .header__inner {
+        // MO
+        @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
+            padding: 0 12px;
+        }
+
+        // Tablet
+        @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
+            padding: 0 20px;
+        }
+    }
+
     .header__sub-title {
         display: flex;
         align-items: center;
@@ -87,4 +99,6 @@ header {
         color: var(--gray-111);
         padding-left: 4px;
     }
+
+    
 }

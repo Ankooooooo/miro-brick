@@ -5,8 +5,12 @@
 
 ### Device Size Guide
 > Mobile: Width <= 834px  
-> Tablet: 834px < Width <= 1312px  
+> Tablet: 834px < Width < 1312px  
 > PC: 1312px <= Width
 
 ### Install Extension
 > Live Sass Compiler
+
+### Font
+> Base: Noto Sans KR
+> Used: Roboto, Apple SD Gothic Neo

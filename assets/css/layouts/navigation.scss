@@ -3,41 +3,47 @@
     width: 100%;
 
     // MO
-    @media screen and (max-width: #{$breakpoint-tablet}) {
+    @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
         padding: 0 20px;
     }
 
     // Tablet
-    @media screen and (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-pc}) {
+    @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
         padding: 0 28px;
     }
 
     // MO and Tablet
-    @media screen and (max-width: #{$breakpoint-pc}) {
+    @media screen and (max-width: #{$breakpoint-pc - 1px}) {
         height: 48px;
     }
 
     // PC
-    @media screen and (min-width: #{$breakpoint-pc}) {
+    @media screen and (min-width: #{$breakpoint-pc - 1px}) {
         height: 60px;
         justify-content: center;
+        margin-top: 32px;
     }
 
     .navigation__list {
         display: flex;
-        justify-content: space-between;
-
         align-items: center;
         overflow-x: auto;
+        border-bottom: 1px solid #ddd;
+        
+        &.product {
+            justify-content: space-between;
+            border: none;
+        }
 
         // MO and Tablet
-        @media screen and (max-width: #{$breakpoint-pc}) {
+        @media screen and (max-width: #{$breakpoint-pc - 1px}) {
             gap: 20px;
             width: 100%;
         }
         
         // PC
         @media screen and (min-width: #{$breakpoint-pc}) {
+            gap: 40px;
             width: $breakpoint-pc;
         }
 
@@ -66,8 +72,9 @@
 
 .sub.navigation {
     padding: 0;
+    margin-top: 0;
 
-     @media screen and (max-width: #{$breakpoint-pc}) {
+     @media screen and (max-width: #{$breakpoint-pc - 1px}) {
          height: fit-content;
      }
 
@@ -77,15 +84,17 @@
         background-color: #F6F6F6;
         justify-content: flex-start;
         padding: 0 20px;
+        border-top: 1px solid #ddd;
+        border-bottom: none;
 
         // MO
-        @media screen and (max-width: #{$breakpoint-tablet}) {
+        @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
             padding: 12px 20px;
             flex-wrap: wrap;
         }
 
         // Tablet
-        @media screen and (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-pc}) {
+        @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
             padding: 12px 28px;
             flex-wrap: wrap;
         }
@@ -96,13 +105,13 @@
             line-height: 18.17px;
 
             // MO
-            @media screen and (max-width: #{$breakpoint-tablet}) {
+            @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
                 width: 45%;
                 text-align: left;
             }
             
             // Tablet
-            @media screen and (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-pc}) {
+            @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
                 width: 22.2%;
                 text-align: left;
             }

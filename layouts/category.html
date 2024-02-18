@@ -1,4 +1,71 @@
 <!-- Tablet, Mobile size에서 보이는 사이드 메뉴 -->
-<div class="category">
+<section data-viewport="tablet, mobile" class="category">
+
+    <!-- Category Header  -->
+    <header class="header">
+        <div class="header__inner">
+            <h2 class="category__title" >카테고리</h2>
+            <i class="icon icon_close" onclick="handleOpenCategory(false)">메뉴</i>
+        </div>
+    </header>
+
+    <!-- Category Menu List  -->
+    <div class="category__menu">
+        <div class="category__menu-item">
+            <span class="title">제품</span>
+            <ul class="list">
+                <li class="item">고벽돌</li>
+                <li class="item">벽돌(조적용)</li>
+                <li class="item">벽돌타일</li>
+                <li class="item">롱브릭</li>
+                <li class="item">롱타일</li>
+                <li class="item">고급타일</li>
+                <li class="item">천연석/현무암</li>
+                <li class="item">디자인블록</li>
+                <li class="item">조적연결철물</li>
+                <li class="item">바닥재</li>
+            </ul>
+        </div>
+        <div class="category__menu-item">
+            <span class="title">시공갤러리</span>
+            <ul class="list">
+                <li class="item">전체</li>
+                <li class="item">고벽돌</li>
+                <li class="item">롱타일</li>
+                <li class="item">천연석/현무암</li>
+            </ul>
+        </div>
+        <div class="category__menu-item">
+            <span class="title">고객센터</span>
+            <ul class="list">
+                <li class="item">공지</li>
+                <li class="item">질문과 답변</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Category Footer -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__content">
+                <span class="footer__content-title">전화문의</span>
+                
+                <ul class="footer__content-info">
+                    <li class="smartphone"> 010-2221-0809 </li>
+                    <li class="phone"> 02-903-8181 </li>
+                </ul>
+            </div>
     
-</div>
+            <div class="footer__icon">
+                <span class="circle__gray">
+                    <i class="icon icon_naver_mo border" onclick="openUrl('naver')">네이버</i>
+                </span>
+    
+                <span class="circle__gray">
+                    <i class="icon icon_instagram_mo border" onclick="openUrl('instagram')">인스타그램</i>
+                </span>
+            </div>
+        </div>
+    </footer>
+</section>

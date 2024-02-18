@@ -1,16 +1,31 @@
 <!-- Table and Mobile -->
 <!-- 메인페이지가 아닌 메뉴 클릭 후 이동되는 페이지일 경우 사용 -->
+<!-- 제품,  시공갤러리, 고객센터 페이지에서 사용 -->
 <header class="header sub">
     <div class="header__inner">
-        <div class="header__sub-title">
-            <i class="icon icon_left_arrow">뒤로가기</i>
+        <div data-viewport="tablet, mobile" class="header__sub-title">
+            <i class="icon icon_left_arrow" onclick="goback()">뒤로가기</i>
             <span class="header__title"></span>
         </div>
 
+        <img data-viewport="pc" src="/assets/images/logo/logo.svg" alt="Miro Brick Logo" />
+
+
         <div class="header__inner-right">
-            <div class="header__inner-icon">
-                <i class="icon icon_naver_mo">네이버</i>
-                <i class="icon icon_instagram_mo">인스타그램</i>
+            <ul data-viewport="pc" class="header__inner-menu">
+                <li label="제품">제품</li>
+                <li label="시공갤러리">시공갤러리</li>
+                <li label="고객센터">고객센터</li>
+            </ul>
+
+            <div data-viewport="pc" class="header__inner-icon">
+                <i class="icon icon_naver" onclick="openUrl('naver')">네이버</i>
+                <i class="icon icon_instagram" onclick="openUrl('instagram')">인스타그램</i>
+            </div>
+
+            <div data-viewport="tablet, mobile" class="header__inner-icon">
+                <i class="icon icon_naver_mo" onclick="openUrl('naver')">네이버</i>
+                <i class="icon icon_instagram_mo" onclick="openUrl('instagram')">인스타그램</i>
                 <i class="icon icon_category_mo" onclick="handleOpenCategory()">메뉴</i>
             </div>
         </div>

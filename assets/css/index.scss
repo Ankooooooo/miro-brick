@@ -10,3 +10,23 @@
 @import "./layouts/category.scss";
 @import "./layouts/navigation.scss";
 
+main {
+    // background: pink;
+    
+    // MO
+    @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
+        padding: 20px;
+    }
+
+    // Tablet
+    @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
+        padding: 28px;
+    }
+
+    // PC
+    @media screen and (min-width: #{$breakpoint-pc}) {
+        width: $breakpoint-pc;
+        margin: auto;
+        padding: 40px 0;
+    }
+}
