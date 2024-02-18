@@ -49,7 +49,7 @@ function setHeaderTitle(title) {
         const el = document.querySelector("body > header .header__title");
         el.innerText = title;
     }
-    
+
     const elements = document.querySelectorAll('body > header .header__inner-menu [label]');
 
     elements.forEach(function(el) {
@@ -96,7 +96,6 @@ function openUrl(value) {
 
     window.open(type[value]);
 }
-
 
 window.addEventListener('load', function() {
     findViewPort();
