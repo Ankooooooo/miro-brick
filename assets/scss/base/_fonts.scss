@@ -2,20 +2,45 @@
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 400;
-  src: local('Noto Sans KR Regular'), url(/assets/fonts/NotoSans-Regular.woff2) format('woff2'), url(/assets/fonts/NotoSans-Regular.woff) format('woff'),
-    url(/assets/fonts/NotoSans-Regular.otf) format('opentype');
+  src: local('Noto Sans KR Regular'), url('/assets/fonts/NotoSans-Regular.woff2') format('woff2'), url('/assets/fonts/NotoSans-Regular.woff') format('woff'),
+    url('/assets/fonts/NotoSans-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 500;
-  src: local('Noto Sans KR Medium'), url(/assets/fonts/NotoSans-Medium.woff2) format('woff2'), url(/assets/fonts/NotoSans-Medium.woff) format('woff'),
-    url(/assets/fonts/NotoSans-Medium.otf) format('opentype');
+  src: local('Noto Sans KR Medium'), url('/assets/fonts/NotoSans-Medium.woff2') format('woff2'), url('/assets/fonts/NotoSans-Medium.woff') format('woff'),
+    url('/assets/fonts/NotoSans-Medium.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 700;
-  src: local('Noto Sans KR Bold'), url(/assets/fonts/NotoSans-Bold.woff2) format('woff2'), url(/assets/fonts/NotoSans-Bold.woff) format('woff'),
-    url(/assets/fonts/NotoSans-Bold.otf) format('opentype');
+  src: local('Noto Sans KR Bold'), url('/assets/fonts/NotoSans-Bold.woff2') format('woff2'), url('/assets/fonts/NotoSans-Bold.woff') format('woff'),
+    url('/assets/fonts/NotoSans-Bold.otf') format('opentype');
+}
+
+// Roboto
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/Roboto-Light.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Light.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Regular.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Medium.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Bold.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
 }

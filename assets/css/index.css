@@ -28,6 +28,7 @@ body {
   text-size-adjust: 100%;
   font-size: 1.4rem;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -200,17 +201,37 @@ em {
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 400;
-  src: local("Noto Sans KR Regular"), url(/assets/fonts/NotoSans-Regular.woff2) format("woff2"), url(/assets/fonts/NotoSans-Regular.woff) format("woff"), url(/assets/fonts/NotoSans-Regular.otf) format("opentype");
+  src: local("Noto Sans KR Regular"), url("/assets/fonts/NotoSans-Regular.woff2") format("woff2"), url("/assets/fonts/NotoSans-Regular.woff") format("woff"), url("/assets/fonts/NotoSans-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 500;
-  src: local("Noto Sans KR Medium"), url(/assets/fonts/NotoSans-Medium.woff2) format("woff2"), url(/assets/fonts/NotoSans-Medium.woff) format("woff"), url(/assets/fonts/NotoSans-Medium.otf) format("opentype");
+  src: local("Noto Sans KR Medium"), url("/assets/fonts/NotoSans-Medium.woff2") format("woff2"), url("/assets/fonts/NotoSans-Medium.woff") format("woff"), url("/assets/fonts/NotoSans-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 700;
-  src: local("Noto Sans KR Bold"), url(/assets/fonts/NotoSans-Bold.woff2) format("woff2"), url(/assets/fonts/NotoSans-Bold.woff) format("woff"), url(/assets/fonts/NotoSans-Bold.otf) format("opentype");
+  src: local("Noto Sans KR Bold"), url("/assets/fonts/NotoSans-Bold.woff2") format("woff2"), url("/assets/fonts/NotoSans-Bold.woff") format("woff"), url("/assets/fonts/NotoSans-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/Roboto-Light.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Light.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Regular.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Medium.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Bold.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 /* layout */
 header {
@@ -549,11 +570,6 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   display: flex;
   width: 100%;
 }
-@media screen and (max-width: 833px) {
-  .navigation {
-    padding: 0 20px;
-  }
-}
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   .navigation {
     padding: 0 28px;
@@ -580,6 +596,11 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 .navigation .navigation__list.product {
   justify-content: space-between;
   border: none;
+}
+@media screen and (max-width: 833px) {
+  .navigation .navigation__list {
+    padding: 0 20px;
+  }
 }
 @media screen and (max-width: 1311px) {
   .navigation .navigation__list {
@@ -611,6 +632,11 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 .navigation .navigation__list .navigation__item.selected {
   font-weight: 700;
   color: #FF8E2A;
+}
+.navigation .navigation__list .navigation__item-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sub.navigation {
@@ -831,6 +857,28 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
     padding: 0.8rem 1.2rem;
   }
 }
+.drag__area {
+  display: flex;
+  overflow-x: auto;
+}
+.drag__area::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+.drag__area::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 1px;
+}
+.drag__area::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.drag__area::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+.drag__area::-webkit-scrollbar-thumb:active {
+  background: transparent;
+}
+
 /* contents */
 .toggleBody {
   height: 0;
