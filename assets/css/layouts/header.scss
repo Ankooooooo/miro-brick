@@ -58,7 +58,7 @@ header {
             }
             
             .selected {
-                color: var(--primary)   
+                color: $primary;
             }
         }
 
@@ -96,7 +96,7 @@ header {
         font-size: 17px;
         line-height: 19px;
         letter-spacing: -0.2px;
-        color: var(--gray-111);
+        color: $gray-111;
         padding-left: 4px;
     }
 

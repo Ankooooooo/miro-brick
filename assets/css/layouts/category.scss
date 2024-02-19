@@ -50,7 +50,7 @@
                 font-size: 16px;
                 font-weight: 700;
                 letter-spacing: -0.2px;
-                color: var(--gray-111);
+                color: $gray-111;
                 display: inline-block;
             }
 
@@ -63,7 +63,7 @@
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 40px;
-                color: var(--gray-666);
+                color: $gray-666;
                 cursor: pointer;
 
                 // MO
@@ -104,7 +104,7 @@
             font-weight: 500;
             line-height: 17px;
             margin-top: 0;
-            color: var(--gray-444);
+            color: $gray-444;
             height: 19px;
 
             &::after {
@@ -117,7 +117,7 @@
             font-size: 16px;
             font-weight: 700;
             line-height: 18px;
-            color: var(--gray-111);
+            color: $gray-111;
             gap: 12px;
             height: fit-content;
             margin-bottom: 0;

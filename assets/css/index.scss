@@ -12,8 +12,6 @@
 @import "./layouts/navigation.scss";
 
 main {
-    // background: pink;
-    
     // MO
     @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
         padding: 20px;

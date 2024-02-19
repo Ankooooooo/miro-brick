@@ -52,7 +52,7 @@
             font-weight: 500;
             line-height: 21.17px;
             text-align: center;
-            color: var(--gray-111);
+            color: $gray-111;
             min-width: fit-content;
             cursor: pointer;
 
@@ -64,7 +64,7 @@
             
             &.selected {
                 font-weight: 700;
-                color: var(--primary)   
+                color: $primary;
             }
         }
     }
