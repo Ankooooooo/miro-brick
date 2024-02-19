@@ -2,11 +2,6 @@
     display: flex;
     width: 100%;
 
-    // MO
-    @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
-        padding: 0 20px;
-    }
-
     // Tablet
     @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
         padding: 0 28px;
@@ -33,6 +28,11 @@
         &.product {
             justify-content: space-between;
             border: none;
+        }
+
+        // MO
+        @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
+            padding: 0 20px;
         }
 
         // MO and Tablet

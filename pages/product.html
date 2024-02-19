@@ -41,7 +41,13 @@
 
 </html>
 
-<script>
+<script async type="module">
+    import { dragToScroll } from '../assets/js/dragToScroll.js';
+    
+    setTimeout(() => {
+        dragToScroll('.navigation');
+    }, 500);
+
     window.title = '제품';
     window.subTitle = '고벽돌';
 </script>
