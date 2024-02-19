@@ -3,6 +3,15 @@
 ### Environment
 > 형태: 반응형 웹
 
+### Branch Rule
+> main
+>
+> feature/main : 메인  
+> feature/product : 제품  
+> feature/gallery : 시공 갤러리  
+> feature/board : 고객센터  
+
+
 ### Viewport Size Guide
 > Mobile: Width <= 834px  
 > Tablet: 834px < Width < 1312px  
@@ -15,7 +24,7 @@
 > </p>
 > <p>
 > // Tablet <br />
-> @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) 
+> @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px})  
 > </p>
 > <p>
 > // PC <br />
@@ -36,12 +45,12 @@
         <strong>Main</strong>
     </summary>
 
-> Header 
-> Category 
-> Navigation_product 
-> 
+> Header  
+> Category  
+> Navigation_product  
+>  
 > Main contents
-> 
+>  
 > Footer
 </details>
 
@@ -50,12 +59,12 @@
         <strong>Product (제품)</strong>
     </summary>
 
-> Header 
-> Category 
-> Navigation_product 
-> 
+> Header  
+> Category  
+> Navigation_product  
+>  
 > Product contents
-> 
+>  
 > Footer
 </details>
 
@@ -63,13 +72,13 @@
     <summary>
         <strong>Gallery (시공갤러리)</strong>
     </summary>
-
-> Header 
-> Category 
-> Navigation_gallery 
-> 
+ 
+> Header  
+> Category  
+> Navigation_gallery  
+>  
 > Gallery contents
-> 
+>  
 > Footer
 </details>
 
@@ -78,12 +87,12 @@
         <strong>Qna (고객센터)</strong>
     </summary>
 
-> Header 
-> Category 
-> Navigation_qna 
-> 
+> Header  
+> Category  
+> Navigation_qna  
+>  
 > GalleQnary contents
-> 
+>  
 > Footer
 </details>
 
@@ -142,7 +151,7 @@ Mobile, Tablet에서만 show : data-viewport="mobile, pc"
 
  parameter - value (boolean)
     > true: 열기
-    > false: 닫기 
+    > false: 닫기  
 
  사용 페이지 : header, subHeader, category
 ```
