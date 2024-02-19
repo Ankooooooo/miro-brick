@@ -166,61 +166,17 @@ em {
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 400;
-  src: local("Noto Sans KR Regular"), url(../../fonts/NotoSans-Regular.woff2) format("woff2"), url(../../fonts/NotoSans-Regular.woff) format("woff"), url(../../fonts/NotoSans-Regular.otf) format("opentype");
+  src: local("Noto Sans KR Regular"), url(/assets/fonts/NotoSans-Regular.woff2) format("woff2"), url(/assets/fonts/NotoSans-Regular.woff) format("woff"), url(/assets/fonts/NotoSans-Regular.otf) format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 500;
-  src: local("Noto Sans KR Medium"), url(../../fonts/NotoSans-Medium.woff2) format("woff2"), url(../../fonts/NotoSans-Medium.woff) format("woff"), url(../../fonts/NotoSans-Medium.otf) format("opentype");
+  src: local("Noto Sans KR Medium"), url(/assets/fonts/NotoSans-Medium.woff2) format("woff2"), url(/assets/fonts/NotoSans-Medium.woff) format("woff"), url(/assets/fonts/NotoSans-Medium.otf) format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 700;
-  src: local("Noto Sans KR Bold"), url(../../fonts/NotoSans-Bold.woff2) format("woff2"), url(../../fonts/NotoSans-Bold.woff) format("woff"), url(../../fonts/NotoSans-Bold.otf) format("opentype");
-}
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  src: local("Montserrat Regular"), url(../../fonts/Montserrat/Montserrat-Regular.woff2) format("woff2"), url(../../fonts/Montserrat/Montserrat-Regular.woff) format("woff"), url(../../fonts/NotoSans-Regular.otf) format("opentype");
-}
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 500;
-  src: local("Montserrat Medium"), url(../../fonts/Montserrat/Montserrat-Medium.woff2) format("woff2"), url(../../fonts/Montserrat/Montserrat-Medium.woff) format("woff"), url(../../fonts/NotoSans-Medium.otf) format("opentype");
-}
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 600;
-  src: local("Montserrat SemiBold"), url(../../fonts/Montserrat/Montserrat-SemiBold.woff2) format("woff2"), url(../../fonts/Montserrat/Montserrat-SemiBold.woff) format("woff"), url(../../fonts/NotoSans-Medium.otf) format("opentype");
-}
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  src: local("Montserrat Bold"), url(../../fonts/Montserrat/Montserrat-Bold.woff2) format("woff2"), url(../../fonts/Montserrat/Montserrat-Bold.woff) format("woff"), url(../../fonts/NotoSans-Bold.otf) format("opentype");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 400;
-  font-display: swap;
-  src: local("Pretendard Regular"), url("../fonts/Pretendard/Pretendard-Regular.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-display: swap;
-  src: local("Pretendard Medium"), url("../fonts/Pretendard/Pretendard-Medium.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-display: swap;
-  src: local("Pretendard SemiBold"), url("../fonts/Pretendard/Pretendard-SemiBold.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-SemiBold.woff") format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-display: swap;
-  src: local("Pretendard Bold"), url("../fonts/Pretendard/Pretendard-Bold.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Bold.woff") format("woff");
+  src: local("Noto Sans KR Bold"), url(/assets/fonts/NotoSans-Bold.woff2) format("woff2"), url(/assets/fonts/NotoSans-Bold.woff) format("woff"), url(/assets/fonts/NotoSans-Bold.otf) format("opentype");
 }
 /* layout */
 header {
