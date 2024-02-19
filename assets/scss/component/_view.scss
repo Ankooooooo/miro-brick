@@ -1,0 +1,25 @@
+.gallery__view {
+  color: $gray-111;
+  margin-top: 12px;
+
+  .view__title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .view__info {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .view__img {
+    margin-top: 40px;
+    .img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      overflow: hidden;
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
