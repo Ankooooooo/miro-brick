@@ -29,7 +29,7 @@ function findViewPort() {
 function showViewport() {
     var allElements = document.querySelectorAll('[data-viewport]');
     allElements.forEach(function(el) {
-        var viewport = el.dataset.viewport;
+        const { viewport } = el.dataset;
         if ( viewport && !viewport.includes(window.viewport) ) {
             el.style.display = 'none';
         } else {
@@ -68,6 +68,8 @@ function setSelectedNaviation(title) {
             el.classList.add('selected');
         }
     });
+
+    title === '공지' && document.querySelector('.navigation__list > .navigation__item-btn')?.remove();
 }
 
 // 사이드 메뉴 열기 or 닫기

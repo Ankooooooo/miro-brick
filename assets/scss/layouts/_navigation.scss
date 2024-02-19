@@ -61,17 +61,17 @@
                 font-size: 16px;
                 line-height: 23.17px;
             }
-
-            &:has(a.btn) {
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-            }
             
             &.selected {
                 font-weight: 700;
                 color: $primary;
             }
+        }
+
+        .navigation__item-btn {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
         }
     }
 }
