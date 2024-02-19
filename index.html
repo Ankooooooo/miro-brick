@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miro Brick</title>
+    <link rel="stylesheet" href="./assets/vendors/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <script defer src="/assets/js/base.js"></script>
 </head>
@@ -19,12 +20,50 @@
     <div data-include-path="/layouts/navigation_product.html"></div>
 
     <!-- Main -->
-    <main style="height: 200px;">
-        Main ^_^
+    <main>
+      <div class="swiper is-main">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/seed/picsum/640/860" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/seed/picsum/640/860" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/seed/picsum/640/860" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/seed/picsum/640/860" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </main>
 
     <!-- Footer -->
     <div data-include-path="/layouts/footer.html"></div>
+
+    <script src="/assets/vendors/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".is-main", {
+        loop: true,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+          clickable: true,
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+                    '<span class="bar"></span>' +
+                    '<span class="' + totalClass + '"></span>';
+          }
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 </body>
 
 </html>

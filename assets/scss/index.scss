@@ -14,6 +14,9 @@
 /* contents */
 @import "contents/contents";
 
+/* components */
+@import "components/swiper.scss";
+
 main {
     // MO
     @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
