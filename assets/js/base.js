@@ -45,7 +45,7 @@ function showViewport() {
 function setHeaderTitle(title) {
     const el_header = document.querySelector('body > header');
 
-    if (el_header.className.includes('sub')) {
+    if (el_header?.className.includes('sub')) {
         const el = document.querySelector("body > header .header__title");
         el.innerText = title;
     }
