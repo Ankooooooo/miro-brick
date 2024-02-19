@@ -1,0 +1,158 @@
+// button
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.is-primary {
+        padding: 1.1rem 6rem 1.3rem;
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #fff;
+        background-color: $primary;
+    }
+}
+
+//toggle
+.toggleBody {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.4s;
+}
+.toggleBtn {
+    cursor: pointer;
+
+    .icon_toggle_arrow {
+        transform: rotate(0);
+        transition: transform ease 0.3s;
+    }
+
+    &.is-active {
+        .icon_toggle_arrow {
+            transform: rotate(-180deg);
+            transition: transform ease 0.3s;
+        }
+    }
+}
+
+// pagination
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+
+    .icon {
+        display: block;
+    }
+
+    .icon_page_prev {
+        margin-right: 1.2rem;
+    }
+
+    .icon_page_next {
+        margin-left: 1.2rem;
+    }
+
+    span {
+        padding-top: 1rem;
+        color: $gray-888;        
+    }
+
+    .num {
+        padding: 0.4rem 0;
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: #fff;
+        color: $gray-888;
+        
+        + .num {
+            margin-left: 0.8rem;
+        }
+
+        &.is-home {
+            background-color: #EBEBEB;
+        }
+
+        &.is-active {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+}
+
+// qna, notice - board
+.board__list {
+    .board__listItem {
+        border-bottom: 0.1rem solid #eee;
+    }
+
+    .board__header {
+        position: relative;
+        padding: 2rem 2.8rem 2rem 0;
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        .board__info {
+            margin: 0.6rem 0 1rem;
+            display: flex;
+            align-items: center;
+            
+            span {
+                font-size: 1.3rem;
+                color: $gray-888;
+                
+                + span {
+                    margin-left: 1.3rem;
+                }
+            }
+        }
+
+        .icon {
+            position: absolute;
+            top: 2rem;
+            right: 0;
+        }
+
+        .tag {
+            padding: 0.4rem 0.75rem;
+            display: inline-block;
+            border-radius: 999rem;
+            border: 0.1rem solid #ddd;
+            font-size: 1rem;
+            line-height: 1;
+            color: $gray-888;
+
+            &.is-complete {
+                font-weight: 500;
+                background-color: $gray-444;
+                border-color: $gray-444;
+                color: #fff;
+            }
+        }
+    }
+
+    .board__contents {
+        padding: 4rem;
+        border-radius: 0.8rem;
+        font-size: 1.5rem;
+        background-color: #F6F6F6;
+    }
+}
+
+.board__footer {
+    position: relative;
+
+    .btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

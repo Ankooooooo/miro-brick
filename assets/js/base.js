@@ -96,6 +96,42 @@ function openUrl(value) {
     window.open(type[value]);
 }
 
+function toggle() {
+    let toggle = document.querySelectorAll('.toggleBtn');
+    let toggleTarget = document.querySelectorAll('.toggleBody');
+
+    toggleTarget.forEach((e)=>{
+        e.style.height = 0;
+    });
+
+    toggle.forEach(function(item){
+        item.addEventListener('click', function(e){
+            e.preventDefault();
+
+            let parent = item.closest(".toggle");
+            let toggleBody = parent.querySelector('.toggleBody');
+
+            if( !item.classList.contains('is-active') ){
+                item.classList.add('is-active');
+                toggleBody.style.height = 'auto';
+
+                let setHeight = toggleBody.clientHeight + 'px';
+
+                toggleBody.style.height = '0';
+
+                setTimeout(()=>{
+                    toggleBody.style.height = setHeight;
+                },0)
+
+            }else {
+                item.classList.remove('is-active');
+                toggleBody.style.height = '0';
+            }
+        })
+    })
+}
+
+
 window.addEventListener('load', function() {
     findViewPort();
     includePath(() => {
@@ -103,6 +139,7 @@ window.addEventListener('load', function() {
         setHeaderTitle(window.title);
         setSelectedNaviation(window.subTitle);
     });
+    toggle();
 });
 
 window.addEventListener('resize', function() {

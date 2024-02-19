@@ -3,46 +3,79 @@
     font-size: 0;
     text-indent: -999px;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .icon_naver {
     width: 40px;
     height: 40px;
-    background: url('/assets/images/icon/icon-naver-pc.svg') no-repeat center;
+    background-image: url('/assets/images/icon/icon-naver-pc.svg');
 }
 
 .icon_instagram {
     width: 40px;
     height: 40px;
-    background: url('/assets/images/icon/icon-instagram-pc.svg') no-repeat center;
+    background-image: url('/assets/images/icon/icon-instagram-pc.svg');
 }
 
 .icon_close {
     width: 40px;
     height: 40px;
-    background: url('/assets/images/icon/icon-close.svg') no-repeat center;
+    background-image: url('/assets/images/icon/icon-close.svg');
 }
 
 .icon_naver_mo {
     width: 40px;
     height: 40px;
-    background: url('/assets/images/icon/icon-naver-mo.svg') no-repeat center;
+    background-image: url('/assets/images/icon/icon-naver-mo.svg');
 }
 
 .icon_instagram_mo {
     width: 40px;
     height: 40px;
-    background: url('/assets/images/icon/icon-instagram-mo.svg') no-repeat center;
+    background-image: url('/assets/images/icon/icon-instagram-mo.svg');
 }
 
 .icon_category_mo {
     width: 40px;
     height: 40px;
-    background: url('/assets/images/icon/icon-catecory-mo.svg') no-repeat center;
+    background-image: url('/assets/images/icon/icon-catecory-mo.svg');
 }
 
 .icon_left_arrow {
     width: 40px;
     height: 40px;
-    background: url('/assets/images/icon/icon-left-arrow.svg') no-repeat center;
+    background-image: url('/assets/images/icon/icon-left-arrow.svg');
+}
+
+.icon_toggle_arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url('/assets/images/icon/icon-toggle-arrow.svg');
+}
+
+
+[class*=icon_page_]{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.icon_page_first {
+    background-image: url('/assets/images/icon/icon-page-first.svg');
+}
+.icon_page_prev {
+    background-image: url('/assets/images/icon/icon-page-prev.svg');
+}
+.icon_page_next {
+    background-image: url('/assets/images/icon/icon-page-next.svg');
+}
+.icon_page_last {
+    background-image: url('/assets/images/icon/icon-page-last.svg');
+}
+
+.icon_board_arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url('/assets/images/icon/icon-board-arrow.svg');
 }

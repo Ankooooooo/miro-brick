@@ -11,6 +11,9 @@
 @import "layouts/category.scss";
 @import "layouts/navigation.scss";
 
+/* contents */
+@import "contents/contents";
+
 main {
     // MO
     @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
@@ -27,5 +30,9 @@ main {
         width: $breakpoint-pc;
         margin: auto;
         padding: 40px 0;
+
+        &.board {
+            padding: 4rem 0 18.8rem;
+        }
     }
 }
