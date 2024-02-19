@@ -1,0 +1,57 @@
+
+// input
+.form__input,
+.form__textarea {
+    width: 100%;
+    border-radius: 0.4rem;
+    border: 0.1rem solid #E8E8E8;
+    outline: none;
+
+    &:focus {
+        border-color: $gray-111;
+    }
+
+
+    &:disabled {
+        background-color: #F6F6F6;
+        color: #c4c4c4;
+    }
+
+    &.is-error {
+        border-color: #FF5555;
+    }
+}
+
+.form__input {
+    padding: 0.95rem 1.2rem;
+}
+
+.form__textarea {
+    padding: 0.8rem 1.2rem;
+}
+
+
+// MO
+@media screen and (max-width: #{$breakpoint-tablet - 1px}) {
+    
+}
+
+// Tablet
+@media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
+    
+}
+
+// PC
+@media screen and (min-width: #{$breakpoint-pc}) {
+    .form__input, .form__textarea {
+        font-size: 1.5rem;
+    }
+
+    .form__input {
+        padding: 1.35rem 1.2rem;
+    }
+
+    .form__textarea {
+        padding: 0.8rem 1.2rem;
+    }
+}
