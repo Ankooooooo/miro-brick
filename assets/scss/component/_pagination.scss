@@ -1,0 +1,49 @@
+
+// pagination
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+
+    .icon {
+        display: block;
+    }
+
+    .icon_page_prev {
+        margin-right: 1.2rem;
+    }
+
+    .icon_page_next {
+        margin-left: 1.2rem;
+    }
+
+    span {
+        padding-top: 1rem;
+        color: $gray-888;        
+    }
+
+    .num {
+        padding: 0.4rem 0;
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: #fff;
+        color: $gray-888;
+        
+        + .num {
+            margin-left: 0.8rem;
+        }
+
+        &.is-home {
+            background-color: #EBEBEB;
+        }
+
+        &.is-active {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+// button
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.is-primary {
+        padding: 0 6rem;
+        height: 4.8rem;
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #fff;
+        background-color: $primary;
+
+        &:focus, &:active {
+            background-color: #CA6307;
+        }
+    }
+
+    &.is-secondary {
+        padding: 0 1.2rem;
+        height: 4rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        border-radius: 0.4rem;
+        border: 0.1rem solid $gray-111;
+
+        &:focus,
+        &:active {
+            background-color: $primary;
+            border-color: $primary;
+            color: #fff;
+        }
+    }
+
+    &.is-more {
+        position: relative;
+        gap: 0.4rem;
+        padding: 0 4rem 0 2rem;
+        height: 3.6rem;
+        border-radius: 999rem;
+        border: 0.1rem solid #E8E8E8;
+        font-size: 1.3rem;
+        background-color: #fff;
+
+        strong {
+        
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            transform: translateY(-50%);
+            background-image: url('/assets/images/icon/icon-more-arrow.svg');
+        }
+
+        &:focus,
+        &:active {
+            background-color: $primary;
+            border-color: $primary;
+            color: #fff;
+
+            strong {
+                color: #fff !important;
+            }
+
+            &::after {
+                background-image: url('/assets/images/icon/icon-more-arrow-white.svg');
+            }
+        }
+    }
+
+
+
+    // PC
+    @media screen and (min-width: #{$breakpoint-pc}) {
+        &.is-more {
+            height: 3.2rem;
+            padding: 0rem 1.6rem 0rem 3.2rem;
+            font-size: 1.2rem;
+
+            strong {
+                display: none;
+            }
+
+            &::after {
+                left: 1.6rem;
+                background-image: url('/assets/images/icon/icon-more-plus.svg');
+            }
+
+            &:focus,
+            &:active {
+                &::after {
+                    background-image: url('/assets/images/icon/icon-more-plus-white.svg');
+                }
+            }
+        }
+
+        &.is-secondary {
+            padding: 0 1.6rem;
+            height: 4.8rem;
+            font-size: 1.5rem;
+        }
+    }
+}
