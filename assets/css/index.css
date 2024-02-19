@@ -608,11 +608,6 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
     line-height: 23.17px;
   }
 }
-.navigation .navigation__list .navigation__item:has(a.btn) {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
 .navigation .navigation__list .navigation__item.selected {
   font-weight: 700;
   color: #FF8E2A;
