@@ -26,7 +26,7 @@
 > Live Sass Compiler
 
 ### Font
-> Base: Noto Sans KR
+> Base: Noto Sans KR  
 > Used: Roboto, Apple SD Gothic Neo
 
 ### Layout Structure
@@ -36,9 +36,9 @@
         <strong>Main</strong>
     </summary>
 
-> Header
-> Category
-> Navigation_product
+> Header 
+> Category 
+> Navigation_product 
 > 
 > Main contents
 > 
@@ -50,9 +50,9 @@
         <strong>Product (제품)</strong>
     </summary>
 
-> Header
-> Category
-> Navigation_product
+> Header 
+> Category 
+> Navigation_product 
 > 
 > Product contents
 > 
@@ -64,9 +64,9 @@
         <strong>Gallery (시공갤러리)</strong>
     </summary>
 
-> Header
-> Category
-> Navigation_gallery
+> Header 
+> Category 
+> Navigation_gallery 
 > 
 > Gallery contents
 > 
@@ -78,9 +78,9 @@
         <strong>Qna (고객센터)</strong>
     </summary>
 
-> Header
-> Category
-> Navigation_qna
+> Header 
+> Category 
+> Navigation_qna 
 > 
 > GalleQnary contents
 > 

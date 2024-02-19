@@ -11,7 +11,7 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": null
+            "savePath": "/assets/css"
         },
         // {
         //     "format": "compressed",
@@ -26,7 +26,7 @@
     ],
     "liveSassCompile.settings.includeItems": [
         // 경로에 있는 .scss파일만 컴파일
-        "/assets/css/*.scss",
+        "/assets/scss/*.scss",
         // "index.scss"
     ],
     

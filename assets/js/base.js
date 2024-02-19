@@ -57,7 +57,6 @@ function setHeaderTitle(title) {
             el.classList.add('selected');
         }
     });
-    
 }
 
 // Navigation 선택된 메뉴 설정

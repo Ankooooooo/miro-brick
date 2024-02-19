@@ -1,15 +1,15 @@
 /* base */
-@import "./base/reset.scss";
-@import "./base/variables.scss";
-@import "./base/icons.scss";
-@import "./base/fonts.scss";
+@import "base/reset.scss";
+@import "base/variables.scss";
+@import "base/icons.scss";
+@import "base/fonts.scss";
 
 
 /* layout */
-@import "./layouts/header.scss";
-@import "./layouts/footer.scss";
-@import "./layouts/category.scss";
-@import "./layouts/navigation.scss";
+@import "layouts/header.scss";
+@import "layouts/footer.scss";
+@import "layouts/category.scss";
+@import "layouts/navigation.scss";
 
 main {
     // MO

@@ -114,15 +114,6 @@ em {
   display: none;
 }
 
-:root {
-  --gray-111: #111111;
-  --gray-444: #444444;
-  --gray-666: #666666;
-  --gray-888: #888888;
-  --primary: #FF8E2A;
-  --primary-gradient: linear-gradient(90deg, rgba(255,166,33,1) 0%, rgba(255,134,42,1) 100%);
-}
-
 .icon {
   display: inline-block;
   font-size: 0;
@@ -172,6 +163,65 @@ em {
   background: url("/assets/images/icon/icon-left-arrow.svg") no-repeat center;
 }
 
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  src: local("Noto Sans KR Regular"), url(../../fonts/NotoSans-Regular.woff2) format("woff2"), url(../../fonts/NotoSans-Regular.woff) format("woff"), url(../../fonts/NotoSans-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  src: local("Noto Sans KR Medium"), url(../../fonts/NotoSans-Medium.woff2) format("woff2"), url(../../fonts/NotoSans-Medium.woff) format("woff"), url(../../fonts/NotoSans-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  src: local("Noto Sans KR Bold"), url(../../fonts/NotoSans-Bold.woff2) format("woff2"), url(../../fonts/NotoSans-Bold.woff) format("woff"), url(../../fonts/NotoSans-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: local("Montserrat Regular"), url(../../fonts/Montserrat/Montserrat-Regular.woff2) format("woff2"), url(../../fonts/Montserrat/Montserrat-Regular.woff) format("woff"), url(../../fonts/NotoSans-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  src: local("Montserrat Medium"), url(../../fonts/Montserrat/Montserrat-Medium.woff2) format("woff2"), url(../../fonts/Montserrat/Montserrat-Medium.woff) format("woff"), url(../../fonts/NotoSans-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  src: local("Montserrat SemiBold"), url(../../fonts/Montserrat/Montserrat-SemiBold.woff2) format("woff2"), url(../../fonts/Montserrat/Montserrat-SemiBold.woff) format("woff"), url(../../fonts/NotoSans-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: local("Montserrat Bold"), url(../../fonts/Montserrat/Montserrat-Bold.woff2) format("woff2"), url(../../fonts/Montserrat/Montserrat-Bold.woff) format("woff"), url(../../fonts/NotoSans-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("../fonts/Pretendard/Pretendard-Regular.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("../fonts/Pretendard/Pretendard-Medium.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("../fonts/Pretendard/Pretendard-SemiBold.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("../fonts/Pretendard/Pretendard-Bold.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Bold.woff") format("woff");
+}
 /* layout */
 header {
   display: flex;
@@ -230,7 +280,7 @@ header .header__inner-right .header__inner-menu li {
   cursor: pointer;
 }
 header .header__inner-right .header__inner-menu .selected {
-  color: var(--primary);
+  color: #FF8E2A;
 }
 header .header__inner-right .header__inner-icon {
   display: flex;
@@ -260,7 +310,7 @@ header .header__inner-right .header__inner-icon {
   font-size: 17px;
   line-height: 19px;
   letter-spacing: -0.2px;
-  color: var(--gray-111);
+  color: #111111;
   padding-left: 4px;
 }
 
@@ -305,7 +355,7 @@ header .header__inner-right .header__inner-icon {
   margin: 36px 0 12px;
   display: block;
   cursor: pointer;
-  color: var(--gray-666);
+  color: #666666;
 }
 @media screen and (max-width: 360px) {
   .footer .footer__content-title {
@@ -326,7 +376,7 @@ header .header__inner-right .header__inner-icon {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  color: var(--gray-666);
+  color: #666666;
   transition: all 0.3s ease;
   height: fit-content;
   max-height: 500px;
@@ -348,7 +398,7 @@ header .header__inner-right .header__inner-icon {
 }
 .footer .copyright {
   font-size: 12px;
-  color: var(--gray-666);
+  color: #666666;
   display: inline-block;
   line-height: 16px;
   font-family: "Roboto";
@@ -423,7 +473,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.2px;
-  color: var(--gray-111);
+  color: #111111;
   display: inline-block;
 }
 .category .category__menu .category__menu-item .list {
@@ -434,7 +484,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   font-size: 14px;
   font-weight: 500;
   line-height: 40px;
-  color: var(--gray-666);
+  color: #666666;
   cursor: pointer;
 }
 @media screen and (max-width: 833px) {
@@ -469,7 +519,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   font-weight: 500;
   line-height: 17px;
   margin-top: 0;
-  color: var(--gray-444);
+  color: #444444;
   height: 19px;
 }
 .category .footer .footer__content-title::after {
@@ -480,7 +530,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
-  color: var(--gray-111);
+  color: #111111;
   gap: 12px;
   height: fit-content;
   margin-bottom: 0;
@@ -558,7 +608,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   font-weight: 500;
   line-height: 21.17px;
   text-align: center;
-  color: var(--gray-111);
+  color: #111111;
   min-width: fit-content;
   cursor: pointer;
 }
@@ -570,7 +620,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 }
 .navigation .navigation__list .navigation__item.selected {
   font-weight: 700;
-  color: var(--primary);
+  color: #FF8E2A;
 }
 
 .sub.navigation {
