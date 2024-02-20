@@ -24,15 +24,21 @@
 main {
     // MO
     @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
-        padding: 20px;
+        padding: 2rem;
+
+        + .footer {
+            display: none;
+        }
     }
 
     // Tablet
     @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
-        padding: 28px;
+        padding: 2.8rem;
 
         &.board {
-            padding: 0 2.8rem;
+            + .footer {
+                display: none;
+            }
         }
     }
 
@@ -40,7 +46,7 @@ main {
     @media screen and (min-width: #{$breakpoint-pc}) {
         width: $breakpoint-pc;
         margin: auto;
-        padding: 40px 0;
+        padding: 4rem 0;
 
         &.board {
             padding: 4rem 0 18.8rem;
