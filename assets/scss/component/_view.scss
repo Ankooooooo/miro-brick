@@ -65,7 +65,7 @@
         }
         .desc  {
           font-weight: 700;
-          line-height: 20px;
+          line-height: 18px;
         }
       }
       .title {
@@ -120,7 +120,6 @@
         font-weight: 500;
         line-height: 14px;
         &:not(:first-child) {
-          position: relative;
           &:before {
             content: "";
             display: inline-block;
