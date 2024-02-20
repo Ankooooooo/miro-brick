@@ -1,6 +1,10 @@
 header {
     display: flex;
     justify-content: center;
+    background: white;
+    z-index: 2;
+    width: 100%;
+    top: 0;
 
     // MO and Tablet
     @media screen and (max-width: #{$breakpoint-pc - 1px}) {
@@ -99,6 +103,11 @@ header {
         color: $gray-111;
         padding-left: 4px;
     }
+}
 
-    
+.headerShadow {
+    position: fixed;
+    height: 8px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
 }

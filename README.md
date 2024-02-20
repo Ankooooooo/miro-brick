@@ -127,6 +127,15 @@ PC에서만 show : data-viewport="pc"
 Mobile, Tablet에서만 show : data-viewport="mobile, pc"
 ```
 
+###### - handleChangeFooterState
+```
+ Footer Show 여부 지정
+
+ Show: PC 모든 페이지, Tablet 홈페이지, Mobile 홈페이지
+ Hide: Tablet, Mobile 홈페이지를 제외한 모든 페이지
+```
+
+
 ###### - setHeaderTitle
 ```
  현재 열려있는 1Depth 메뉴의 이름 지정

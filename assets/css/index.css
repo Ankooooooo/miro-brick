@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* base */
 *,
 *::before,
@@ -201,17 +202,17 @@ em {
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 400;
-  src: local("Noto Sans KR Regular"), url("/assets/fonts/NotoSans-Regular.woff2") format("woff2"), url("/assets/fonts/NotoSans-Regular.woff") format("woff"), url("/assets/fonts/NotoSans-Regular.otf") format("opentype");
+  src: local("Noto Sans KR Regular"), url("/assets/fonts/NotoSans/NotoSans-Regular.woff2") format("woff2"), url("/assets/fonts/NotoSans/NotoSans-Regular.woff") format("woff"), url("/assets/fonts/NotoSans/NotoSans-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 500;
-  src: local("Noto Sans KR Medium"), url("/assets/fonts/NotoSans-Medium.woff2") format("woff2"), url("/assets/fonts/NotoSans-Medium.woff") format("woff"), url("/assets/fonts/NotoSans-Medium.otf") format("opentype");
+  src: local("Noto Sans KR Medium"), url("/assets/fonts/NotoSans/NotoSans-Medium.woff2") format("woff2"), url("/assets/fonts/NotoSans/NotoSans-Medium.woff") format("woff"), url("/assets/fonts/NotoSans/NotoSans-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 700;
-  src: local("Noto Sans KR Bold"), url("/assets/fonts/NotoSans-Bold.woff2") format("woff2"), url("/assets/fonts/NotoSans-Bold.woff") format("woff"), url("/assets/fonts/NotoSans-Bold.otf") format("opentype");
+  src: local("Noto Sans KR Bold"), url("/assets/fonts/NotoSans/NotoSans-Bold.woff2") format("woff2"), url("/assets/fonts/NotoSans/NotoSans-Bold.woff") format("woff"), url("/assets/fonts/NotoSans/NotoSans-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Roboto";
@@ -235,6 +236,10 @@ em {
 header {
   display: flex;
   justify-content: center;
+  background: white;
+  z-index: 2;
+  width: 100%;
+  top: 0;
 }
 @media screen and (max-width: 1311px) {
   header {
@@ -323,6 +328,13 @@ header .header__inner-right .header__inner-icon {
   padding-left: 4px;
 }
 
+.headerShadow {
+  position: fixed;
+  height: 8px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 .footer {
   background-color: #F6F6F6;
   display: flex;
@@ -395,6 +407,9 @@ header .header__inner-right .header__inner-icon {
 .footer .footer__content-info li {
   display: flex;
 }
+.footer .footer__content-info li:last-child, .footer .footer__content-info li:nth-last-child(2) {
+  font-family: "Roboto";
+}
 .footer .footer__content-info .info__title {
   font-size: 12px;
   font-weight: 700;
@@ -435,10 +450,10 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 }
 
 .category {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
+  width: 0%;
   height: 100%;
   background-color: white;
   transition: all 0.3s ease;
@@ -446,6 +461,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 }
 .category.open {
   right: 0;
+  width: 100%;
 }
 .category .header {
   border-bottom: 1px solid #eee;
@@ -568,6 +584,9 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 .navigation {
   display: flex;
   width: 100%;
+  background: white;
+  z-index: 2;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   .navigation {
@@ -577,6 +596,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 @media screen and (max-width: 1311px) {
   .navigation {
     height: 48px;
+    border-bottom: 1px solid #eee;
   }
 }
 @media screen and (min-width: 1311px) {
@@ -590,7 +610,6 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   display: flex;
   align-items: center;
   overflow-x: auto;
-  border-bottom: 1px solid #ddd;
 }
 .navigation .navigation__list.product {
   justify-content: space-between;
@@ -611,6 +630,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   .navigation .navigation__list {
     gap: 40px;
     width: 1312px;
+    border-bottom: 1px solid #ddd;
   }
 }
 .navigation .navigation__list .navigation__item {
@@ -889,6 +909,10 @@ input[type=file] {
   background: transparent;
 }
 
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+} /* 스크롤 바 */
 .swiper.is-main {
   margin: -2rem -2rem 0;
   padding: 0 2rem;
@@ -1207,6 +1231,13 @@ input[type=file] {
     display: none;
   }
 }
+.shadowBox {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+}
+
 @media screen and (max-width: 833px) {
   main {
     padding: 20px;
@@ -1218,7 +1249,6 @@ input[type=file] {
   }
   main.board {
     padding: 0 2.8rem;
-    height: calc(100vh - 10rem);
   }
 }
 @media screen and (min-width: 1312px) {
