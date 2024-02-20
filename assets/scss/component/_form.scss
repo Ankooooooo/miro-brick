@@ -23,13 +23,24 @@
 }
 
 .form__input {
-    padding: 0.95rem 1.2rem;
+    padding: 0 1.2rem;
+    height: 4rem;
 }
 
 .form__textarea {
     padding: 0.8rem 1.2rem;
 }
 
+//file
+input[type=file]{
+    display: none;
+}
+
+.formGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
 
 // MO
 @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
@@ -48,7 +59,7 @@
     }
 
     .form__input {
-        padding: 1.35rem 1.2rem;
+        height: 4.8rem;
     }
 
     .form__textarea {

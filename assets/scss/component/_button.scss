@@ -1,8 +1,9 @@
 // button
 .btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 
     &.is-primary {
         padding: 0 6rem;
@@ -102,7 +103,7 @@
         }
 
         &.is-secondary {
-            padding: 0 1.6rem;
+            padding: 0.4rem 1.6rem 0;
             height: 4.8rem;
             font-size: 1.5rem;
         }

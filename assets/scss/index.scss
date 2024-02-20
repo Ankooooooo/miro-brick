@@ -30,6 +30,11 @@ main {
     // Tablet
     @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
         padding: 28px;
+
+        &.board {
+            padding: 0 2.8rem;
+            height: calc(100vh - 10rem);
+        }
     }
 
     // PC
