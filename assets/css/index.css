@@ -10,7 +10,7 @@
 }
 
 html {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
   font-size: 62.5%;
   color: #111;
 }
@@ -215,23 +215,21 @@ em {
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/fonts/roboto/Roboto-Light.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Light.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Light.ttf") format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("/assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Regular.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
+  unicode-range: U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+  src: url("/assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Regular.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Medium.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
+  unicode-range: U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+  src: url("/assets/fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Medium.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Bold.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
+  unicode-range: U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+  src: url("/assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("/assets/fonts/roboto/Roboto-Bold.woff") format("woff"), url("/assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
 }
 /* layout */
 header {
@@ -879,85 +877,6 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   background: transparent;
 }
 
-/* contents */
-.toggleBody {
-  height: 0;
-  overflow: hidden;
-  transition: height ease 0.4s;
-}
-
-.toggleBtn {
-  cursor: pointer;
-}
-.toggleBtn .icon_toggle_arrow {
-  transform: rotate(0);
-  transition: transform ease 0.3s;
-}
-.toggleBtn.is-active .icon_toggle_arrow {
-  transform: rotate(-180deg);
-  transition: transform ease 0.3s;
-}
-
-.board__list .board__listItem {
-  border-bottom: 0.1rem solid #eee;
-}
-.board__list .board__header {
-  position: relative;
-  padding: 2rem 2.8rem 2rem 0;
-}
-.board__list .board__header .title {
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-.board__list .board__header .board__info {
-  margin: 0.6rem 0 1rem;
-  display: flex;
-  align-items: center;
-}
-.board__list .board__header .board__info span {
-  font-size: 1.3rem;
-  color: #888888;
-}
-.board__list .board__header .board__info span + span {
-  margin-left: 1.3rem;
-}
-.board__list .board__header .icon {
-  position: absolute;
-  top: 2rem;
-  right: 0;
-}
-.board__list .board__header .tag {
-  padding: 0.4rem 0.75rem;
-  display: inline-block;
-  border-radius: 999rem;
-  border: 0.1rem solid #ddd;
-  font-size: 1rem;
-  line-height: 1;
-  color: #888888;
-}
-.board__list .board__header .tag.is-complete {
-  font-weight: 500;
-  background-color: #444444;
-  border-color: #444444;
-  color: #fff;
-}
-.board__list .board__contents {
-  padding: 4rem;
-  border-radius: 0.8rem;
-  font-size: 1.5rem;
-  background-color: #F6F6F6;
-}
-
-.board__footer {
-  position: relative;
-}
-.board__footer .btn {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-/* components */
 .swiper.is-main {
   margin: -2rem -2rem 0;
   padding: 0 2rem;
@@ -1042,6 +961,84 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   height: 1rem;
   margin: 0 0.4rem;
   background-color: #999;
+}
+
+/* contents */
+.toggleBody {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.4s;
+}
+
+.toggleBtn {
+  cursor: pointer;
+}
+.toggleBtn .icon_toggle_arrow {
+  transform: rotate(0);
+  transition: transform ease 0.3s;
+}
+.toggleBtn.is-active .icon_toggle_arrow {
+  transform: rotate(-180deg);
+  transition: transform ease 0.3s;
+}
+
+.board__list .board__listItem {
+  border-bottom: 0.1rem solid #eee;
+}
+.board__list .board__header {
+  position: relative;
+  padding: 2rem 2.8rem 2rem 0;
+}
+.board__list .board__header .title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.board__list .board__header .board__info {
+  margin: 0.6rem 0 1rem;
+  display: flex;
+  align-items: center;
+}
+.board__list .board__header .board__info span {
+  font-size: 1.3rem;
+  color: #888888;
+}
+.board__list .board__header .board__info span + span {
+  margin-left: 1.3rem;
+}
+.board__list .board__header .icon {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+.board__list .board__header .tag {
+  padding: 0.4rem 0.75rem;
+  display: inline-block;
+  border-radius: 999rem;
+  border: 0.1rem solid #ddd;
+  font-size: 1rem;
+  line-height: 1;
+  color: #888888;
+}
+.board__list .board__header .tag.is-complete {
+  font-weight: 500;
+  background-color: #444444;
+  border-color: #444444;
+  color: #fff;
+}
+.board__list .board__contents {
+  padding: 4rem;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  background-color: #F6F6F6;
+}
+
+.board__footer {
+  position: relative;
+}
+.board__footer .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 @media screen and (max-width: 833px) {
