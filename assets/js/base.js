@@ -37,8 +37,22 @@ function showViewport() {
         }
     });
 
+    handleChangeFooterState();
+
     console.log('viewport: ', window.viewport);
     console.log('innerWidth: ', innerWidth);
+}
+
+function handleChangeFooterState() {
+    const footer = document.querySelector("body > footer");
+
+    if(!footer) return;
+
+    if ( window.viewport !== 'pc' || !window.title ) {
+        footer.style.display = 'none';
+    } else {
+        footer.style.display = '';
+    }
 }
 
 // 메뉴별 타이틀 설정
@@ -75,7 +89,14 @@ function setSelectedNaviation(title) {
 // 사이드 메뉴 열기 or 닫기
 function handleOpenCategory(value = true) {
     const el_category = document.querySelector('.category');
-    value ? el_category?.classList.add('open') : el_category?.classList.remove('open');
+
+    if(value) {
+        el_category?.classList.add('open');
+        document.body.style.overflow='hidden';
+    } else {
+        el_category?.classList.remove('open');
+        document.body.style.overflow='';
+    }
 };
 
 function handleOpenFootercontent() {
