@@ -1,4 +1,4 @@
-.gallery__view {
+.img__view {
   color: $gray-111;
   margin-top: 12px;
 
@@ -9,7 +9,6 @@
     letter-spacing: -0.2px;
   }
   .view__info {
-    margin-top: 8px;
     font-size: 15px;
     font-weight: 400;
     line-height: 26px;
@@ -27,28 +26,63 @@
       }
     }
   }
+
+  &.is-gallery {
+    .view__info {
+      margin-top: 8px;
+    }
+  }
+  &.is-product {
+    .view__detail {
+      display: flex;
+      flex-direction: column;
+      .detail {
+        margin-top: 24px;
+      }
+    }
+    .view__desc {
+      margin-top: 12px;
+      .info {
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+      }
+      .title {
+        
+      }
+    }
+    .view__info {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+  }
 }
 
 
 // Tablet
 @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
-  .gallery__view {
-    .view__title {
-      line-height: 34.75px;
+  .img__view {
+    &.is-gallery {
+      .view__title {
+        line-height: 34.75px;
+      }
     }
   }
 }
 // PC
 @media screen and (min-width: #{$breakpoint-pc}) {
-  .gallery__view {
-    .view__title {
-      font-size: 28px;
-      line-height: 36px;
-    }
-    .view__info {
-      margin-top: 24px;
-      font-size: 16px;
-      line-height: 30px;
+  .img__view {
+    &.is-gallery {
+      .view__title {
+        font-size: 28px;
+        line-height: 36px;
+      }
+      .view__info {
+        margin-top: 24px;
+        font-size: 16px;
+        line-height: 30px;
+      }
     }
     .view__img {
       margin-top: 40px;
