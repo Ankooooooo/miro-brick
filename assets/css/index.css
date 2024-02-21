@@ -1339,6 +1339,9 @@ input[type=file] {
     display: none;
   }
 }
+.main {
+  padding-bottom: 6rem;
+}
 .main .swiper.is-main-banner {
   padding-bottom: 2rem;
 }
@@ -1405,6 +1408,22 @@ input[type=file] {
   display: flex;
   justify-content: center;
 }
+.main .main__content-inner + .main__content-inner {
+  margin-top: 2.8rem;
+}
+.main .main__content-inner .main__board-list {
+  margin-top: -0.8rem;
+}
+.main .main__content-inner .main__board-item {
+  border-bottom: 0.1rem solid #EEE;
+}
+.main .main__content-inner .main__board-item a {
+  display: block;
+  padding: 1.2rem 0;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.45;
+}
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   .main .main-popular {
     grid-template-columns: repeat(8, minmax(0, 1fr));
@@ -1412,8 +1431,38 @@ input[type=file] {
   }
 }
 @media screen and (min-width: 1312px) {
+  .main {
+    padding-bottom: 18.8rem;
+  }
   .main .main__content + .main__content {
     margin-top: 6rem;
+  }
+  .main .main__content.is-between {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3.2rem;
+  }
+  .main .main__content.is-between .main__content-inner {
+    padding: 4rem;
+    border-radius: 1.2rem;
+    background-color: #F8F8F8;
+  }
+  .main .main__content.is-between .main__content-inner + .main__content-inner {
+    margin-top: 0;
+  }
+  .main .main__content.is-between .main__content-inner .main__content-header {
+    justify-content: flex-start;
+    margin-bottom: 2.4rem;
+  }
+  .main .main__content.is-between .main__content-inner .main__content-title h1 {
+    font-size: 2.8rem;
+  }
+  .main .main__content.is-between .main__content-inner .main__board-item {
+    background-color: #FFF;
+  }
+  .main .main__content.is-between .main__content-inner .main__board-item a {
+    padding-bottom: 1.4rem;
+    font-size: 1.5rem;
   }
   .main .swiper.is-main-banner {
     margin-bottom: 6rem;

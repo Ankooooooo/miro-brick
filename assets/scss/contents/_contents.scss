@@ -307,6 +307,7 @@
 
 // main
 .main {
+    padding-bottom: 6rem;
     .swiper {
         &.is-main-banner {
             padding-bottom: 2rem;
@@ -390,6 +391,27 @@
         justify-content: center;
     }
 
+    .main__content-inner {
+        + .main__content-inner {
+            margin-top: 2.8rem;
+        }
+
+        .main__board-list {
+            margin-top: -0.8rem;
+        }
+
+        .main__board-item {
+            border-bottom: 0.1rem solid #EEE;
+            a {
+                display: block;
+                padding: 1.2rem 0;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 1.45;
+            }
+        }
+    }
+
     // Tablet
     @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
         .main-popular {
@@ -400,10 +422,46 @@
 
     // PC
     @media screen and (min-width: #{$breakpoint-pc}) {
+        padding-bottom: 18.8rem;
         .main__content {
             + .main__content {
                 margin-top: 6rem;
             }
+
+            &.is-between {
+                display: grid;
+                grid-template-columns: repeat(2,minmax(0,1fr));
+                gap: 3.2rem;
+
+                .main__content-inner {
+                    padding: 4rem;
+                    border-radius: 1.2rem;
+                    background-color: #F8F8F8;
+
+                    + .main__content-inner {
+                        margin-top: 0;
+                    }
+
+                    .main__content-header {
+                        justify-content: flex-start;
+                        margin-bottom: 2.4rem;
+                    }
+
+                    .main__content-title h1 {
+                        font-size: 2.8rem;
+                    }
+
+                    .main__board-item {
+                        background-color: #FFF;
+
+                        a {
+                            padding-bottom: 1.4rem;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+            
         }
 
         .swiper {
