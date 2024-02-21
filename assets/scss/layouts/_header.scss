@@ -105,9 +105,14 @@ header {
     }
 }
 
-.headerShadow {
-    position: fixed;
-    height: 8px;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
+header.headerShadow {
+    // 네비게이션 바 있을 경우 네비게이션에 섀도우 추가
+    ~ .navigation:not(.sub) {
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    // 네비게이션 바 없을 경우 헤어데 섀도우 추가
+    &:not(:has(.navigation)) {
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.02);
+    }
 }
