@@ -1530,7 +1530,7 @@ input[type=file] {
   }
   .main .main-gallery::before, .main .main-gallery::after {
     content: "";
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     top: 0;
     bottom: 0;
