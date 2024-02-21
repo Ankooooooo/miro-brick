@@ -435,10 +435,10 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 }
 
 .category {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
+  width: 0%;
   height: 100%;
   background-color: white;
   transition: all 0.3s ease;
@@ -446,6 +446,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 }
 .category.open {
   right: 0;
+  width: 100%;
 }
 .category .header {
   border-bottom: 1px solid #eee;
@@ -1349,6 +1350,9 @@ input[type=file] {
   }
   main + .footer {
     display: none;
+  }
+  main.board:has(.qna) {
+    padding-bottom: 8rem;
   }
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {

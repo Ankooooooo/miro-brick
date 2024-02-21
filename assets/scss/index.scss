@@ -29,6 +29,12 @@ main {
         + .footer {
             display: none;
         }
+
+        &.board {
+            &:has(.qna) {
+                padding-bottom: 8rem;
+            }
+        }
     }
 
     // Tablet

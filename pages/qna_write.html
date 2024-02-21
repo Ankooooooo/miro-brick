@@ -8,6 +8,7 @@
     <title>Miro Brick - 고객센터</title>
     <link rel="stylesheet" href="../assets/css/index.css">
     <script defer src="../assets/js/base.js"></script>
+    <script src="../assets/js/fileUploader.js"></script>
 </head>
 
 <body>
@@ -44,43 +45,12 @@
 
             <div class="board__form">
                 <div class="board__formLabel">첨부파일</div>
-                <div class="file">
-                    <label for="file1" class="btn is-secondary">파일 선택</label>
-                    <input type="file" id="file1" class="btn is-secondary">
-                    <ul class="file__list">
-                        <li class="is-empty">첨부한 파일이 없습니다.</li>
-                    </ul>
-                </div>
+                <div class="file" id="multipleUploader-1"></div>
             </div>
 
             <div class="board__form">
                 <div class="board__formLabel">이미지 첨부</div>
-                <div class="file">
-                    <label for="file22" class="btn is-secondary">파일 선택</label>
-                    <input type="file" id="file2" class="btn is-secondary">
-                    <ul class="file__list">
-                        <li>
-                            <span>첨부파일_2020200302</span>
-                            <button type="button" class="file__delete"></button>
-                        </li>
-                        <li>
-                            <span>첨부파일_2020200302</span>
-                            <button type="button" class="file__delete"></button>
-                        </li>
-                        <li>
-                            <span>첨부파일_2020200302</span>
-                            <button type="button" class="file__delete"></button>
-                        </li>
-                        <li>
-                            <span>첨부파일_2020200302</span>
-                            <button type="button" class="file__delete"></button>
-                        </li>
-                        <li>
-                            <span>첨부파일_2020200302첨부파일_2020200302첨부파일_2020200302첨부파일_2020200302</span>
-                            <button type="button" class="file__delete"></button>
-                        </li>
-                    </ul>
-                </div>
+                <div class="file" id="multipleUploader-2"></div>
             </div>
 
             <div class="board__form">
@@ -111,7 +81,14 @@
     <!-- Footer -->
     <div data-include-path="/layouts/footer.html"></div>
 </body>
+<script>
+    let multiUploader;
 
+    window.addEventListener("DOMContentLoaded", function () {
+        multiUploader1 = new dsMultiUpload('multipleUploader-1');
+        multiUploader2 = new dsMultiUpload('multipleUploader-2');
+    });
+</script>
 </html>
 
 <script>

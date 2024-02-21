@@ -154,6 +154,23 @@ function toggle() {
     })
 }
 
+function fileUploader() {
+    const fileInput = document.querySelectorAll('.form__file');
+    const test = document.createElement('div');
+    fileInput.forEach((item)=>{
+        item.addEventListener('input', function(e){
+            const files = e.target.files;
+            let fileList = Array.from(files).map(file=>file.name)
+
+            for(i=0; i<fileList.length; i++){
+                let li = `<li>${fileList[i]}</li>`;
+
+                
+            }
+        })
+    })
+}
+
 
 window.addEventListener('load', function() {
     findViewPort();
@@ -163,6 +180,7 @@ window.addEventListener('load', function() {
         setSelectedNaviation(window.subTitle);
     });
     toggle();
+    fileUploader();
 });
 
 window.addEventListener('resize', function() {
