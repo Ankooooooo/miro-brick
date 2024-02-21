@@ -2,22 +2,22 @@
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 400;
-  src: local('Noto Sans KR Regular'), url('/assets/fonts/NotoSans-Regular.woff2') format('woff2'), url('/assets/fonts/NotoSans-Regular.woff') format('woff'),
-    url('/assets/fonts/NotoSans-Regular.otf') format('opentype');
+  src: local('Noto Sans KR Regular'), url('/assets/fonts/NotoSans/NotoSans-Regular.woff2') format('woff2'), url('/assets/fonts/NotoSans/NotoSans-Regular.woff') format('woff'),
+    url('/assets/fonts/NotoSans/NotoSans-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 500;
-  src: local('Noto Sans KR Medium'), url('/assets/fonts/NotoSans-Medium.woff2') format('woff2'), url('/assets/fonts/NotoSans-Medium.woff') format('woff'),
-    url('/assets/fonts/NotoSans-Medium.otf') format('opentype');
+  src: local('Noto Sans KR Medium'), url('/assets/fonts/NotoSans/NotoSans-Medium.woff2') format('woff2'), url('/assets/fonts/NotoSans/NotoSans-Medium.woff') format('woff'),
+    url('/assets/fonts/NotoSans/NotoSans-Medium.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 700;
-  src: local('Noto Sans KR Bold'), url('/assets/fonts/NotoSans-Bold.woff2') format('woff2'), url('/assets/fonts/NotoSans-Bold.woff') format('woff'),
-    url('/assets/fonts/NotoSans-Bold.otf') format('opentype');
+  src: local('Noto Sans KR Bold'), url('/assets/fonts/NotoSans/NotoSans-Bold.woff2') format('woff2'), url('/assets/fonts/NotoSans/NotoSans-Bold.woff') format('woff'),
+    url('/assets/fonts/NotoSans/NotoSans-Bold.otf') format('opentype');
 }
 
 // Roboto

@@ -1,6 +1,5 @@
 .footer {
     background-color: #F6F6F6;
-    // height: 510px;
     display: flex;
     justify-content: center;
     
@@ -10,7 +9,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 40px 0 80px;
-   
+
         // MO
         @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
             flex-direction: column;
@@ -35,7 +34,7 @@
             img {
                 width: 80px;
                 height: 70px;
-            } 
+            }
         }
     }
 
@@ -78,6 +77,11 @@
 
         li {
             display: flex;
+
+            &:last-child,
+            &:nth-last-child(2) {
+                font-family: 'Roboto';
+            }
         }
 
         .info__title {
