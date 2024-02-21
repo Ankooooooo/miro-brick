@@ -328,11 +328,11 @@ header .header__inner-right .header__inner-icon {
   padding-left: 4px;
 }
 
-.headerShadow {
-  position: fixed;
-  height: 8px;
-  width: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
+header.headerShadow ~ .navigation:not(.sub) {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.02);
+}
+header.headerShadow:not(:has(.navigation)) {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.02);
 }
 
 .footer {
