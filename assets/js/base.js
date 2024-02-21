@@ -1,7 +1,7 @@
 // data-include-path
 function includePath(callback) {
     var allElements = document.getElementsByTagName('*');
-    Array.prototype.forEach.call(allElements, function(el) {
+    Array.prototype.forEach.call(allElements, function (el) {
         var includePath = el.dataset.includePath;
         if (includePath) {
             var xhttp = new XMLHttpRequest();
@@ -20,7 +20,7 @@ function includePath(callback) {
 window.viewport = 'pc';
 function findViewPort() {
     let { innerWidth } = window
-    
+
     if (innerWidth < 834) window.viewport = 'mobile'
     else if (innerWidth >= 834 && innerWidth < 1312) window.viewport = 'tablet'
     else window.viewport = 'pc'
@@ -28,9 +28,9 @@ function findViewPort() {
 
 function showViewport() {
     var allElements = document.querySelectorAll('[data-viewport]');
-    allElements.forEach(function(el) {
+    allElements.forEach(function (el) {
         const { viewport } = el.dataset;
-        if ( viewport && !viewport.includes(window.viewport) ) {
+        if (viewport && !viewport.includes(window.viewport)) {
             el.style.display = 'none';
         } else {
             el.style.display = '';
@@ -46,9 +46,9 @@ function showViewport() {
 function handleChangeFooterState() {
     const footer = document.querySelector("body > footer");
 
-    if(!footer) return;
+    if (!footer) return false;
 
-    if ( window.viewport !== 'pc' || !window.title ) {
+    if (window.viewport !== 'pc' && !!window.title) {
         footer.style.display = 'none';
     } else {
         footer.style.display = '';
@@ -66,8 +66,8 @@ function setHeaderTitle(title) {
 
     const elements = document.querySelectorAll('body > header .header__inner-menu [label]');
 
-    elements.forEach(function(el) {
-        if(el.getAttribute('label') === title) {
+    elements.forEach(function (el) {
+        if (el.getAttribute('label') === title) {
             el.classList.add('selected');
         }
     });
@@ -77,8 +77,8 @@ function setHeaderTitle(title) {
 function setSelectedNaviation(title) {
     const elements = document.querySelectorAll('.navigation [label]');
 
-    elements.forEach(function(el) {
-        if(el.getAttribute('label') === title) {
+    elements.forEach(function (el) {
+        if (el.getAttribute('label') === title) {
             el.classList.add('selected');
         }
     });
@@ -90,15 +90,16 @@ function setSelectedNaviation(title) {
 function handleOpenCategory(value = true) {
     const el_category = document.querySelector('.category');
 
-    if(value) {
+    if (value) {
         el_category?.classList.add('open');
-        document.body.style.overflow='hidden';
+        document.body.style.overflow = 'hidden';
     } else {
         el_category?.classList.remove('open');
-        document.body.style.overflow='';
+        document.body.style.overflow = '';
     }
 };
 
+// Footer Show 여부 지정
 function handleOpenFootercontent() {
     const el_fc = document.querySelector('body > footer .footer__content');
     el_fc.className?.includes('open') ? el_fc.classList?.remove('open') : el_fc.classList?.add('open')
@@ -123,18 +124,18 @@ function toggle() {
     let toggle = document.querySelectorAll('.toggleBtn');
     let toggleTarget = document.querySelectorAll('.toggleBody');
 
-    toggleTarget.forEach((e)=>{
+    toggleTarget.forEach((e) => {
         e.style.height = 0;
     });
 
-    toggle.forEach(function(item){
-        item.addEventListener('click', function(e){
+    toggle.forEach(function (item) {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
 
             let parent = item.closest(".toggle");
             let toggleBody = parent.querySelector('.toggleBody');
 
-            if( !item.classList.contains('is-active') ){
+            if (!item.classList.contains('is-active')) {
                 item.classList.add('is-active');
                 toggleBody.style.height = 'auto';
 
@@ -142,11 +143,11 @@ function toggle() {
 
                 toggleBody.style.height = '0';
 
-                setTimeout(()=>{
+                setTimeout(() => {
                     toggleBody.style.height = setHeight;
-                },0)
+                }, 0)
 
-            }else {
+            } else {
                 item.classList.remove('is-active');
                 toggleBody.style.height = '0';
             }
@@ -154,36 +155,56 @@ function toggle() {
     })
 }
 
-function fileUploader() {
-    const fileInput = document.querySelectorAll('.form__file');
-    const test = document.createElement('div');
-    fileInput.forEach((item)=>{
-        item.addEventListener('input', function(e){
-            const files = e.target.files;
-            let fileList = Array.from(files).map(file=>file.name)
+function headerFixedTop() {
+    const isPc = window.viewport === 'pc';
 
-            for(i=0; i<fileList.length; i++){
-                let li = `<li>${fileList[i]}</li>`;
+    const el = {
+        header: document.querySelector('body > header') || '',
+        navigation: document.querySelector('body > .navigation') || '',
+        main: document.querySelector('body > main') || ''
+    };
 
-                
-            }
-        })
-    })
+    const height = { header: 52, nav: 48 };
+
+    for( const item in el ) {
+        if(!el[item]) return false;
+
+        if(isPc) {
+            el[item].style.position = '';
+        } else {
+            el[item].style.position = (item === 'main') ? 'relative' : 'fixed';
+        }
+    }
+
+    el.navigation.style.top = isPc ? '' : `${height['header']}px` ;
+    el.main.style.marginTop = isPc ? '' : `${height['header'] + height['nav']}px`;
 }
 
+window.isTop = false;
+function hadnleScroll() {
+    window.isTop = window.scrollY >= 20 ? false : true;
 
-window.addEventListener('load', function() {
+    document.querySelector('.headerShadow').style.display = !isTop && window.viewport !== 'pc' ? '' : 'none';
+}
+
+window.addEventListener('load', function () {
     findViewPort();
     includePath(() => {
         showViewport();
         setHeaderTitle(window.title);
         setSelectedNaviation(window.subTitle);
+        headerFixedTop();
     });
     toggle();
-    fileUploader();
+    hadnleScroll();
 });
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     findViewPort();
     showViewport();
+    headerFixedTop();
 });
+
+window.addEventListener('scroll', function() {
+    hadnleScroll();
+})
