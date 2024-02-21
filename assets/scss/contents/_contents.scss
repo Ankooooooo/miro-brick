@@ -360,7 +360,6 @@
         span {
             display: block;
             overflow: hidden;
-            // max-height: 61.8%;
             border-radius: 50%;
             border: 0.1rem solid #EEE;
     
@@ -508,6 +507,7 @@
                 line-height: 1.5;
                 color: #111;
                 background-image: none;
+                background-color: #FFF;
 
                 &::before {
                     content: "";
