@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miro Brick - 시공갤러리</title>
+    <link rel="stylesheet" href="../assets/vendors/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/index.css">
     <script defer src="../assets/js/base.js"></script>
 </head>
@@ -22,9 +23,28 @@
     <main>
       <div class="img__view is-product">
         <div class="view__detail">
-          <div class="slide">
-            슬라이드 영역
-          </div>
+          <!-- Banner -->
+          <section class="swiper is-product-view">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://picsum.photos/seed/picsum/758/758" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://picsum.photos/seed/picsum/758/758" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://picsum.photos/seed/picsum/758/758" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://picsum.photos/seed/picsum/758/758" alt="">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </section>
+          <!-- //Banner -->
+
           <div class="detail">
             <div class="breadcrumb">
               <span>홈</span>
@@ -50,16 +70,16 @@
         </div>
         <div class="view__img">
           <div class="img">
-            <img src="../assets/images/png/product-view1.png" alt="">
+            <img src="https://picsum.photos/id/237/1312/984" alt="">
           </div>
           <div class="img">
-            <img src="../assets/images/png/product-view2.png" alt="">
+            <img src="https://picsum.photos/id/9/1312/984" alt="">
           </div>
           <div class="img">
-            <img src="../assets/images/png/product-view3.png" alt="">
+            <img src="https://picsum.photos/id/20/1312/984" alt="">
           </div>
           <div class="img">
-            <img src="../assets/images/png/product-view4.png" alt="">
+            <img src="https://picsum.photos/id/27/1312/984" alt="">
           </div>
         </div>
       </div>
@@ -74,6 +94,7 @@
 
     <!-- Footer -->
     <div data-include-path="/layouts/footer.html"></div>
+    <script src="../assets/vendors/swiper-bundle.min.js"></script>
 </body>
 
 </html>
@@ -81,4 +102,19 @@
 <script>
     window.title = '시공갤러리';
     window.subTitle = '전체';
+
+    const productSwiper = new Swiper(".is-product-view", {
+      loop: true,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+        clickable: true,
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' +
+                  '<span class="bar"></span>' +
+                  '<span class="' + totalClass + '"></span>';
+        }
+      }
+    });
 </script>
