@@ -23,18 +23,19 @@
 /* contents */
 @import "contents/contents";
 
-main {
+main {    
     // MO
     @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
         padding: 2rem;
 
-        + .footer {
-            display: none;
-        }
-
         &.board {
+            padding-bottom: 8rem;
             &:has(.qna) {
                 padding-bottom: 8rem;
+            }
+
+            + .scrollTopBtn {
+                display: none;
             }
         }
     }
@@ -44,7 +45,9 @@ main {
         padding: 2.8rem;
 
         &.board {
-            + .footer {
+            padding-bottom: 8rem;
+
+            + .scrollTopBtn {
                 display: none;
             }
         }
@@ -57,7 +60,7 @@ main {
         padding: 4rem 0;
 
         &.board {
-            padding: 4rem 0 18.8rem;
+            padding: 4rem 0 12rem;
         }
     }
 }

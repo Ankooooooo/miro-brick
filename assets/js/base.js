@@ -193,9 +193,17 @@ function hadnleScroll() {
 }
 
 function topScroll() {
-    const topScrollBtn = document.querySelector('.scrollTopBtn');
+    const topScroll = document.querySelector('.scrollTopBtn');
+    const topScrollBtn = topScroll.querySelector('.scrollTopBtn__btn');
 
-    window.scrollY > 0 ? topScrollBtn.classList.remove('is-hide') : topScrollBtn.classList.add('is-hide');
+    window.scrollY > 0 ? topScroll.classList.remove('is-hide') : topScroll.classList.add('is-hide');
+    
+    topScrollBtn.addEventListener('click', function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    })
 }
 
 window.addEventListener('load', function () {

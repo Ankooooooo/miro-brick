@@ -2123,18 +2123,24 @@ input[type=file] {
   main {
     padding: 2rem;
   }
-  main + .footer {
-    display: none;
+  main.board {
+    padding-bottom: 8rem;
   }
   main.board:has(.qna) {
     padding-bottom: 8rem;
+  }
+  main.board + .scrollTopBtn {
+    display: none;
   }
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   main {
     padding: 2.8rem;
   }
-  main.board + .footer {
+  main.board {
+    padding-bottom: 8rem;
+  }
+  main.board + .scrollTopBtn {
     display: none;
   }
 }
@@ -2145,6 +2151,6 @@ input[type=file] {
     padding: 4rem 0;
   }
   main.board {
-    padding: 4rem 0 18.8rem;
+    padding: 4rem 0 12rem;
   }
 }
