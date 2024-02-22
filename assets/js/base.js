@@ -192,6 +192,12 @@ function hadnleScroll() {
     !isTop && window.viewport !== 'pc' ? el_header?.classList.add('headerShadow') : el_header?.classList.remove('headerShadow');
 }
 
+function topScroll() {
+    const topScrollBtn = document.querySelector('.scrollTopBtn');
+
+    window.scrollY > 0 ? topScrollBtn.classList.remove('is-hide') : topScrollBtn.classList.add('is-hide');
+}
+
 window.addEventListener('load', function () {
     findViewPort();
     includePath(() => {
@@ -212,4 +218,5 @@ window.addEventListener('resize', function () {
 
 window.addEventListener('scroll', function() {
     hadnleScroll();
+    topScroll();
 })

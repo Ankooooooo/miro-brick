@@ -14,6 +14,7 @@ html {
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   font-size: 62.5%;
   color: #111;
+  min-height: 100vh;
 }
 
 html:lang(ko) {
@@ -794,6 +795,42 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
     padding: 0.4rem 1.6rem 0;
     height: 4.8rem;
     font-size: 1.5rem;
+  }
+}
+
+.scrollTopBtn {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  bottom: 0;
+  right: 1.6rem;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity ease 0.3s;
+}
+.scrollTopBtn.is-hide {
+  opacity: 0;
+  transition: opacity ease 0.3s;
+}
+.scrollTopBtn .scrollTopBtn__btn {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='23.5' fill='white' fill-opacity='0.6' stroke='%23EEEEEE'/%3E%3Cpath d='M24.0004 16.1992V32.3992' stroke='%23666666' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M17.4004 22.1992L24.0004 15.5992L30.6004 22.1992' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+@media screen and (min-width: 834px) and (max-width: 1311px) {
+  .scrollTopBtn {
+    right: 2rem;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .scrollTopBtn {
+    position: sticky;
+    width: 1312px;
+    margin: 0 auto;
   }
 }
 
@@ -1959,7 +1996,7 @@ input[type=file] {
 }
 @media screen and (min-width: 1312px) {
   .main {
-    padding-bottom: 18.8rem;
+    padding-bottom: 12rem;
   }
   .main .main__content + .main__content {
     margin-top: 6rem;
