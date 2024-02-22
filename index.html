@@ -221,6 +221,7 @@
     <!-- Footer -->
     <div data-include-path="/layouts/footer.html"></div>
 
+    <script src="/assets/js/dragToScroll.js"></script>
     <script src="/assets/vendors/swiper-bundle.min.js"></script>
     <script>
       const bannerSwiper = new Swiper(".is-main-banner", {
@@ -251,6 +252,10 @@
           prevEl: ".swiper-button-prev",
         },
       });
+
+      setTimeout(() => {
+        dragToScroll('.navigation');
+      }, 1000);
     </script>
 </body>
 

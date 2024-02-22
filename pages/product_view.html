@@ -102,6 +102,7 @@
 
 </html>
 
+<script src="/assets/js/dragToScroll.js"></script>
 <script>
     window.title = '시공갤러리';
     window.subTitle = '전체';
@@ -120,4 +121,8 @@
         }
       }
     });
+
+    setTimeout(() => {
+      dragToScroll('.navigation');
+    }, 500);
 </script>
