@@ -1,4 +1,78 @@
 
+// 메인
+main {
+    // MO
+    @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
+        padding: 2rem;
+
+        &.board {
+            padding-bottom: 8rem;
+            &:has(.qna) {
+                padding-bottom: 8rem;
+            }
+
+            + .scrollTopBtn {
+                display: none;
+            }
+        }
+
+        &.product {
+            padding: 0;
+        }
+        > * {
+            padding: 2rem;
+        }
+    }
+
+    // Tablet
+    @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
+        padding: 2.8rem;
+
+        &.board {
+            padding-bottom: 8rem;
+
+            + .scrollTopBtn {
+                display: none;
+            }
+        }
+
+        &.product {
+            padding: 0;
+
+            > * {
+                padding: 2.8rem;
+            }
+        }
+    }
+
+    // PC
+    @media screen and (min-width: #{$breakpoint-pc}) {
+        width: $breakpoint-pc;
+        margin: auto;
+        padding: 4rem 0;
+
+        &.board {
+            padding: 4rem 0 12rem;
+        }
+
+        &.product {
+            padding: 0;
+
+
+            .navigation {
+                margin-bottom: 40px;
+            }
+
+            &:not(:has(.navigation)) {
+                margin-top: 40px;
+
+                .img__view {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
 
 //toggle
 .toggleBody {

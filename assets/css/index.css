@@ -294,7 +294,7 @@ header .header__inner-right .header__inner-menu {
 header .header__inner-right .header__inner-menu li {
   cursor: pointer;
 }
-header .header__inner-right .header__inner-menu .selected {
+header .header__inner-right .header__inner-menu .selected a {
   color: #FF8E2A;
 }
 header .header__inner-right .header__inner-icon {
@@ -649,7 +649,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
     line-height: 23.17px;
   }
 }
-.navigation .navigation__list .navigation__item.selected {
+.navigation .navigation__list .navigation__item.selected a {
   font-weight: 700;
   color: #FF8E2A;
 }
@@ -1540,6 +1540,66 @@ input[type=file] {
   }
 }
 /* contents */
+@media screen and (max-width: 833px) {
+  main {
+    padding: 2rem;
+  }
+  main.board {
+    padding-bottom: 8rem;
+  }
+  main.board:has(.qna) {
+    padding-bottom: 8rem;
+  }
+  main.board + .scrollTopBtn {
+    display: none;
+  }
+  main.product {
+    padding: 0;
+  }
+  main > * {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 834px) and (max-width: 1311px) {
+  main {
+    padding: 2.8rem;
+  }
+  main.board {
+    padding-bottom: 8rem;
+  }
+  main.board + .scrollTopBtn {
+    display: none;
+  }
+  main.product {
+    padding: 0;
+  }
+  main.product > * {
+    padding: 2.8rem;
+  }
+}
+@media screen and (min-width: 1312px) {
+  main {
+    width: 1312px;
+    margin: auto;
+    padding: 4rem 0;
+  }
+  main.board {
+    padding: 4rem 0 12rem;
+  }
+  main.product {
+    padding: 0;
+  }
+  main.product .navigation {
+    margin-bottom: 40px;
+  }
+  main.product:not(:has(.navigation)) {
+    margin-top: 40px;
+  }
+  main.product:not(:has(.navigation)) .img__view {
+    margin-top: 0;
+  }
+}
+
 .toggleBody {
   height: 0;
   overflow: hidden;
@@ -2117,40 +2177,4 @@ input[type=file] {
   height: 8px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
   position: absolute;
-}
-
-@media screen and (max-width: 833px) {
-  main {
-    padding: 2rem;
-  }
-  main.board {
-    padding-bottom: 8rem;
-  }
-  main.board:has(.qna) {
-    padding-bottom: 8rem;
-  }
-  main.board + .scrollTopBtn {
-    display: none;
-  }
-}
-@media screen and (min-width: 834px) and (max-width: 1311px) {
-  main {
-    padding: 2.8rem;
-  }
-  main.board {
-    padding-bottom: 8rem;
-  }
-  main.board + .scrollTopBtn {
-    display: none;
-  }
-}
-@media screen and (min-width: 1312px) {
-  main {
-    width: 1312px;
-    margin: auto;
-    padding: 4rem 0;
-  }
-  main.board {
-    padding: 4rem 0 12rem;
-  }
 }
