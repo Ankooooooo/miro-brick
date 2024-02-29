@@ -838,3 +838,17 @@ main {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
     position: absolute;
 }
+
+// Mo and Tablet
+@media screen and (max-width: #{$breakpoint-pc - 1px}) {
+    .onlyPc {
+        display: none !important;
+    }
+}
+
+// Mo and Tablet
+@media screen and (min-width: #{$breakpoint-pc}) {
+    .notPc {
+        display: none !important;
+    }
+}
