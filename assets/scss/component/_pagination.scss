@@ -22,6 +22,13 @@
         color: $gray-888;        
     }
 
+
+    a {
+        &.is-disabled {
+            opacity: 0.3;
+        }
+    }
+
     .num {
         padding: 0.4rem 0;
         width: 3.2rem;
