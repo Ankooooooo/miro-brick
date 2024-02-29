@@ -114,7 +114,7 @@ window.viewport를 통해 확인 가능
 (mobile, tablet, pc)
 ```
 
-###### - showViewport
+###### - showViewport (제거)
 ```
 v-if와 비슷
 data-viewport="[보여주고 싶은 기기 입력]"
