@@ -11,6 +11,7 @@
 }
 
 html {
+  overflow-x: hidden;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   font-size: 62.5%;
   color: #111;
@@ -1065,6 +1066,8 @@ input[type=file] {
   border-radius: 0.8rem;
 }
 .swiper.is-main-gallery .swiper-slide .main-gallery__image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .swiper.is-main-gallery .swiper-slide .main-gallery__title {
@@ -1138,6 +1141,7 @@ input[type=file] {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  aspect-ratio: 1/1;
 }
 .swiper.is-product-view .swiper-button-next,
 .swiper.is-product-view .swiper-button-prev {
@@ -1201,6 +1205,9 @@ input[type=file] {
   flex-wrap: wrap;
   margin: -10px 0 0;
 }
+.img__list.is-gallery {
+  padding: 0;
+}
 .img__list > li {
   margin: 10px 0;
 }
@@ -1211,6 +1218,7 @@ input[type=file] {
   border-radius: 12px;
   overflow: hidden;
   object-fit: cover;
+  aspect-ratio: 1/1;
 }
 .img__list .img__title {
   margin-top: 12px;
@@ -1402,7 +1410,6 @@ input[type=file] {
 }
 .img__view {
   color: #111111;
-  margin-top: 12px;
 }
 .img__view .view__title {
   font-size: 24px;
@@ -1434,8 +1441,14 @@ input[type=file] {
 .img__view .breadcrumb {
   display: none;
 }
+.img__view.is-gallery {
+  padding: 0;
+}
 .img__view.is-gallery .view__info {
   margin-top: 8px;
+}
+.img__view.is-product {
+  margin-top: 12px;
 }
 .img__view.is-product .view__detail {
   display: flex;
