@@ -1,6 +1,5 @@
 .img__view {
   color: $gray-111;
-  margin-top: 12px;
 
   .view__title {
     font-size: 24px;
@@ -60,7 +59,7 @@
         }
         .title {
           min-width: 68px;
-          font-weight: 400;
+          font-weight: 500;
           line-height: 18px;
         }
         .desc  {
@@ -90,9 +89,6 @@
     .view__title {
       line-height: 34.75px;
     }
-    .view__info {
-
-    }
     &.is-product {
       .view__detail {
         flex-direction: row;
@@ -101,6 +97,11 @@
           margin: 0 0 0 28px;
         }
       }
+      .view__img {
+        margin-top: 28px;
+      }
+    }
+    &.is-gallery {
       .view__img {
         margin-top: 28px;
       }
