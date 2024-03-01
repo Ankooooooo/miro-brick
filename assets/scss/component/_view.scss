@@ -1,6 +1,5 @@
 .img__view {
   color: $gray-111;
-  margin-top: 12px;
 
   .view__title {
     font-size: 24px;
@@ -34,11 +33,15 @@
   }
 
   &.is-gallery {
+    padding: 0;
+    
     .view__info {
       margin-top: 8px;
     }
   }
   &.is-product {
+    margin-top: 12px;
+
     .view__detail {
       display: flex;
       flex-direction: column;

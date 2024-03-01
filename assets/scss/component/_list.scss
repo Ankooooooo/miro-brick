@@ -6,6 +6,10 @@
   flex-wrap: wrap;
   margin: -10px 0 0;
 
+  &.is-gallery {
+    padding: 0;
+  }
+
   > li {
     margin: 10px 0;
   }
@@ -17,6 +21,7 @@
     border-radius: 12px;
     overflow: hidden;
     object-fit: cover;
+    aspect-ratio: 1 / 1;
   }
   .img__title {
     margin-top: 12px;

@@ -1,4 +1,83 @@
 
+// 메인
+main {
+    // MO
+    @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
+        padding: 2rem;
+
+        &.board {
+            padding: 0 0 8rem;
+
+            &:has(.qna) {
+                padding-bottom: 8rem;
+            }
+
+            &.is-qna {
+                padding-bottom: 12rem;
+
+                + .scrollTopBtn {
+                    bottom: 6rem;
+                }
+            }
+        }
+
+        &.product {
+            padding: 0;
+        }
+        > * {
+            padding: 2rem;
+        }
+    }
+
+    // Tablet
+    @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
+        padding: 2.8rem;
+
+        &.board {
+            padding-bottom: 8rem;
+
+            + .scrollTopBtn {
+                display: none;
+            }
+        }
+
+        &.product {
+            padding: 0;
+
+            > * {
+                padding: 2.8rem;
+            }
+        }
+    }
+
+    // PC
+    @media screen and (min-width: #{$breakpoint-pc}) {
+        width: $breakpoint-pc;
+        margin: auto;
+        padding: 4rem 0;
+
+        &.board {
+            padding: 4rem 0 12rem;
+        }
+
+        &.product {
+            padding: 0;
+
+
+            .navigation {
+                margin-bottom: 40px;
+            }
+
+            &:not(:has(.navigation)) {
+                margin-top: 40px;
+
+                .img__view {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
 
 //toggle
 .toggleBody {
@@ -763,4 +842,18 @@
     height: 8px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
     position: absolute;
+}
+
+// Mo and Tablet
+@media screen and (max-width: #{$breakpoint-pc - 1px}) {
+    .onlyPc {
+        display: none !important;
+    }
+}
+
+// Mo and Tablet
+@media screen and (min-width: #{$breakpoint-pc}) {
+    .notPc {
+        display: none !important;
+    }
 }

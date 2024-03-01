@@ -3,22 +3,30 @@
     <div class="header__inner">
 
         <!-- Logo Image -->
-        <img data-viewport="pc" src="/assets/images/logo/logo.svg" alt="Miro Brick Logo" />
-        <img data-viewport="tablet, mobile" src="/assets/images/logo/logo-mo.svg" alt="Miro Brick Logo" />
+        <a href="/">
+            <img class="onlyPc" src="/assets/images/logo/logo.svg" alt="Miro Brick Logo" />
+            <img class="notPc" src="/assets/images/logo/logo-mo.svg" alt="Miro Brick Logo" />
+        </a>
 
         <div class="header__inner-right">
-            <ul data-viewport="pc" class="header__inner-menu">
-                <li label="제품">제품</li>
-                <li label="시공갤러리">시공갤러리</li>
-                <li label="고객센터">고객센터</li>
+            <ul class="header__inner-menu onlyPc">
+                <li label="제품">
+                    <a href="/pages/product.html">제품</a>
+                </li>
+                <li label="시공갤러리">
+                    <a href="/pages/gallery.html">시공갤러리</a>
+                </li>
+                <li label="고객센터">
+                    <a href="/pages/qna.html">고객센터</a>
+                </li>
             </ul>
 
-            <div data-viewport="pc" class="header__inner-icon">
+            <div class="header__inner-icon onlyPc">
                 <i class="icon icon_naver" onclick="openUrl('naver')">네이버</i>
                 <i class="icon icon_instagram" onclick="openUrl('instagram')">인스타그램</i>
             </div>
 
-            <div data-viewport="tablet, mobile" class="header__inner-icon">
+            <div class="header__inner-icon notPc">
                 <i class="icon icon_naver_mo" onclick="openUrl('naver')">네이버</i>
                 <i class="icon icon_instagram_mo" onclick="openUrl('instagram')">인스타그램</i>
                 <i class="icon icon_category_mo" onclick="handleOpenCategory()">메뉴</i>

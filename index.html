@@ -178,7 +178,7 @@
       <section class="main__content is-between">
         <div class="main__content-inner">
           <div class="main__content-header">
-            <a class="main__content-title" href="#">
+            <a class="main__content-title" href="/pages/notice.html">
               <h1>공지</h1>
               <span>더보기</span>
             </a>
@@ -196,7 +196,7 @@
 
         <div class="main__content-inner">
           <div class="main__content-header">
-            <a class="main__content-title" href="#">
+            <a class="main__content-title" href="/pages/qna.html">
               <h1>질문과 답변</h1>
               <span>더보기</span>
             </a>
@@ -221,6 +221,7 @@
     <!-- Footer -->
     <div data-include-path="/layouts/footer.html"></div>
 
+    <script src="/assets/js/dragToScroll.js"></script>
     <script src="/assets/vendors/swiper-bundle.min.js"></script>
     <script>
       const bannerSwiper = new Swiper(".is-main-banner", {
@@ -251,6 +252,10 @@
           prevEl: ".swiper-button-prev",
         },
       });
+
+      setTimeout(() => {
+        dragToScroll('.navigation');
+      }, 1000);
     </script>
 </body>
 

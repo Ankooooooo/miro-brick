@@ -26,23 +26,6 @@ function findViewPort() {
     else window.viewport = 'pc'
 }
 
-function showViewport() {
-    var allElements = document.querySelectorAll('[data-viewport]');
-    allElements.forEach(function (el) {
-        const { viewport } = el.dataset;
-        if (viewport && !viewport.includes(window.viewport)) {
-            el.style.display = 'none';
-        } else {
-            el.style.display = '';
-        }
-    });
-
-    handleChangeFooterState();
-
-    console.log('viewport: ', window.viewport);
-    console.log('innerWidth: ', innerWidth);
-}
-
 function handleChangeFooterState() {
     const footer = document.querySelector("body > footer");
 
@@ -193,27 +176,35 @@ function hadnleScroll() {
 }
 
 function topScroll() {
-    const topScrollBtn = document.querySelector('.scrollTopBtn');
+    const topScroll = document.querySelector('.scrollTopBtn');
+    const topScrollBtn = topScroll.querySelector('.scrollTopBtn__btn');
 
-    window.scrollY > 0 ? topScrollBtn.classList.remove('is-hide') : topScrollBtn.classList.add('is-hide');
+    window.scrollY > 0 ? topScroll.classList.remove('is-hide') : topScroll.classList.add('is-hide');
+    
+    topScrollBtn.addEventListener('click', function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    })
 }
 
 window.addEventListener('load', function () {
     findViewPort();
     includePath(() => {
-        showViewport();
         setHeaderTitle(window.title);
         setSelectedNaviation(window.subTitle);
         headerFixedTop();
         hadnleScroll();
+        handleChangeFooterState();
     });
     toggle();
 });
 
 window.addEventListener('resize', function () {
     findViewPort();
-    showViewport();
     headerFixedTop();
+    handleChangeFooterState();
 });
 
 window.addEventListener('scroll', function() {

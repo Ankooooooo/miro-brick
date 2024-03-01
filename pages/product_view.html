@@ -20,7 +20,7 @@
     <div data-include-path="/layouts/navigation_gallery.html"></div>
 
     <!-- Main -->
-    <main>
+    <main class="product">
       <div class="img__view is-product">
         <div class="view__detail">
           <!-- Banner -->
@@ -83,7 +83,8 @@
           </div>
         </div>
       </div>
-      <div class="tel__info">
+
+      <div class="tel__info onlyPc">
         <p class="info__title">전화문의</p>
         <p class="info__tel">
           <a href="tel:010-2221-0809" class="tel phone">010-2221-0809</a>
@@ -92,6 +93,9 @@
       </div>
     </main>
 
+    <!-- top Scroll  -->
+    <div data-include-path="/layouts/topButton.html"></div>
+
     <!-- Footer -->
     <div data-include-path="/layouts/footer.html"></div>
     <script src="../assets/vendors/swiper-bundle.min.js"></script>
@@ -99,6 +103,7 @@
 
 </html>
 
+<script src="/assets/js/dragToScroll.js"></script>
 <script>
     window.title = '시공갤러리';
     window.subTitle = '전체';
@@ -117,4 +122,8 @@
         }
       }
     });
+
+    setTimeout(() => {
+      dragToScroll('.navigation');
+    }, 500);
 </script>
