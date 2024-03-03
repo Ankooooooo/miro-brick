@@ -79,8 +79,14 @@
             display: flex;
 
             &:last-child,
-            &:nth-last-child(2) {
+            &:nth-last-child(2),
+            &:nth-last-child(3) {
                 font-family: 'Roboto';
+
+                .info__title {
+                    font-weight: 600;
+
+                }
             }
         }
 

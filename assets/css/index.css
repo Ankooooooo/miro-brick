@@ -409,8 +409,11 @@ header .header__inner-right .header__inner-icon {
 .footer .footer__content-info li {
   display: flex;
 }
-.footer .footer__content-info li:last-child, .footer .footer__content-info li:nth-last-child(2) {
+.footer .footer__content-info li:last-child, .footer .footer__content-info li:nth-last-child(2), .footer .footer__content-info li:nth-last-child(3) {
   font-family: "Roboto";
+}
+.footer .footer__content-info li:last-child .info__title, .footer .footer__content-info li:nth-last-child(2) .info__title, .footer .footer__content-info li:nth-last-child(3) .info__title {
+  font-weight: 600;
 }
 .footer .footer__content-info .info__title {
   font-size: 12px;
