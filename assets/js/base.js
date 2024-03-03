@@ -168,11 +168,28 @@ function headerFixedTop() {
 
 window.isTop = false;
 function hadnleScroll() {
-    window.isTop = window.scrollY >= 20 ? false : true;
+    window.isTop = window.scrollY > 0 ? false : true;
 
     const el_header = document.querySelector('body > header') || '';
+    const el_navigation = document.querySelector('body > .navigation:not(.sub)') || '';
+    const el = el_navigation && !isDetail ? el_navigation : el_header;
 
-    !isTop && window.viewport !== 'pc' ? el_header?.classList.add('headerShadow') : el_header?.classList.remove('headerShadow');
+    console.log('el: ', el.classList);
+    if(!isTop && window.viewport !== 'pc')  {
+        el.classList.add('headerShadow');
+    } else {
+        el?.classList.remove('headerShadow');
+    }
+}
+
+// 개발 완료 후 추가
+function changeDetailNavigation() {
+    // 상세 페이지일 경우 BODY에 detail 클래스 추가
+    if(window.isDetail) {
+        document.body.classList.add('detail');
+    } else {
+        document.body.classList.remove('detail');
+    }
 }
 
 function topScroll() {
@@ -195,16 +212,18 @@ window.addEventListener('load', function () {
         setHeaderTitle(window.title);
         setSelectedNaviation(window.subTitle);
         headerFixedTop();
-        hadnleScroll();
         handleChangeFooterState();
     });
     toggle();
+    changeDetailNavigation();
+    hadnleScroll();
 });
 
 window.addEventListener('resize', function () {
     findViewPort();
     headerFixedTop();
     handleChangeFooterState();
+    changeDetailNavigation();
 });
 
 window.addEventListener('scroll', function() {

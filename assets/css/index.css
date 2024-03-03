@@ -329,10 +329,7 @@ header .header__inner-right .header__inner-icon {
   padding-left: 4px;
 }
 
-header.headerShadow ~ .navigation:not(.sub) {
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.02);
-}
-header.headerShadow:not(:has(.navigation)) {
+.headerShadow {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.02);
 }
 
@@ -712,6 +709,11 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   }
 }
 
+@media screen and (max-width: 1311px) {
+  .detail .navigation {
+    display: none;
+  }
+}
 /* component */
 .btn {
   display: inline-flex;
