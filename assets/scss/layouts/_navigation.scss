@@ -138,8 +138,14 @@
 
 // 제품, 시공갤러리 상세 페이지 and mo, tablet일 경우 hidden
 @media screen and (max-width: #{$breakpoint-pc - 1px}) {
-    .detail .navigation {
-        display: none;
+    .detail {
+        header {
+            border-bottom: 1px solid #eee;
+        }
+        .navigation {
+            display: none;
+        }
     }
+    
 }
 

@@ -172,13 +172,12 @@ function hadnleScroll() {
 
     const el_header = document.querySelector('body > header') || '';
     const el_navigation = document.querySelector('body > .navigation:not(.sub)') || '';
-    const el = el_navigation && !isDetail ? el_navigation : el_header;
+    const el = el_navigation && !window.isDetail ? el_navigation : el_header;
 
-    console.log('el: ', el.classList);
     if(!isTop && window.viewport !== 'pc')  {
         el.classList.add('headerShadow');
     } else {
-        el?.classList.remove('headerShadow');
+        el.classList && el.classList.remove('headerShadow');
     }
 }
 

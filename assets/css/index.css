@@ -329,6 +329,10 @@ header .header__inner-right .header__inner-icon {
   padding-left: 4px;
 }
 
+.header:not(.sub) ~ .navigation {
+  border-bottom: none;
+}
+
 .headerShadow {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.02);
 }
@@ -710,6 +714,9 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 }
 
 @media screen and (max-width: 1311px) {
+  .detail header {
+    border-bottom: 1px solid #eee;
+  }
   .detail .navigation {
     display: none;
   }
