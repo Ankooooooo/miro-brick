@@ -750,6 +750,8 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   font-weight: 500;
   border-radius: 0.4rem;
   border: 0.1rem solid #111111;
+  font-family: "Noto Sans KR";
+  transform: rotate(0.04deg);
 }
 .btn.is-secondary:focus, .btn.is-secondary:active {
   background-color: #FF8E2A;
@@ -869,9 +871,13 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 .pagination span {
   padding-top: 1rem;
   color: #888888;
+  margin: 0 0.8rem;
 }
 .pagination a.is-disabled {
   opacity: 0.3;
+}
+.pagination a.is-disabled > .icon {
+  cursor: default;
 }
 .pagination .num {
   padding: 0.4rem 0;
@@ -888,6 +894,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 }
 .pagination .num.is-home {
   background-color: #EBEBEB;
+  color: #111;
 }
 .pagination .num.is-active {
   background-color: #FF8E2A;
@@ -918,11 +925,17 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 .form__input {
   padding: 0 1.2rem;
   height: 4rem;
+  font-family: "Noto Sans KR";
+  transform: rotate(0.04deg);
+  color: #111;
 }
 
 .form__textarea {
   padding: 0.8rem 1.2rem;
   resize: none;
+  font-family: "Noto Sans KR";
+  transform: rotate(0.04deg);
+  color: #111;
 }
 
 input[type=file] {
@@ -1748,6 +1761,7 @@ input[type=file] {
 }
 .board .file .file__list li.is-empty {
   color: #888888;
+  font-size: 1.2rem;
 }
 .board .file .file__list li span {
   display: inline-block;
@@ -1762,6 +1776,7 @@ input[type=file] {
   display: inline-block;
   width: 2rem;
   height: 2rem;
+  margin-left: 0.4rem;
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
@@ -1939,6 +1954,9 @@ input[type=file] {
   .board .file .file__list li + li {
     margin-left: 0.8rem;
     margin-top: 0;
+  }
+  .board .file .file__list li.is-empty {
+    font-size: 1.3rem;
   }
   .board .file .file__list li span {
     max-width: 35.3rem;

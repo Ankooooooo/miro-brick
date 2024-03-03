@@ -228,6 +228,7 @@ main {
 
                 &.is-empty {
                     color: $gray-888;
+                    font-size: 1.2rem;
                 }
 
                 span {
@@ -245,6 +246,7 @@ main {
                 display: inline-block;
                 width: 2rem;
                 height: 2rem;
+                margin-left: 0.4rem;
                 vertical-align: middle;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -483,6 +485,10 @@ main {
                     + li {
                         margin-left: 0.8rem;
                         margin-top: 0;
+                    }
+
+                    &.is-empty {
+                        font-size: 1.3rem;
                     }
 
                     span {

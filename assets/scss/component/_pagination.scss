@@ -19,13 +19,17 @@
 
     span {
         padding-top: 1rem;
-        color: $gray-888;        
+        color: $gray-888;   
+        margin: 0 0.8rem;     
     }
 
 
     a {
         &.is-disabled {
             opacity: 0.3;
+            > .icon {
+                cursor: default;
+            }
         }
     }
 
@@ -45,6 +49,7 @@
 
         &.is-home {
             background-color: #EBEBEB;
+            color: #111;
         }
 
         &.is-active {

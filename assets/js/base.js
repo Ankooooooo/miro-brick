@@ -163,7 +163,7 @@ function headerFixedTop() {
         el.navigation.style.top = isPc ? '' : `${height['header']}px` ;
     }
 
-    el.main.style.marginTop = isPc ? '' : `${height['header'] + height['nav']}px`;
+    el.main.style.top = isPc ? '' : `${height['header'] + height['nav']}px`;
 }
 
 window.isTop = false;
@@ -175,7 +175,7 @@ function hadnleScroll() {
     const el = el_navigation && !window.isDetail ? el_navigation : el_header;
 
     if(!isTop && window.viewport !== 'pc')  {
-        el.classList.add('headerShadow');
+        el.classList && el.classList.add('headerShadow');
     } else {
         el.classList && el.classList.remove('headerShadow');
     }

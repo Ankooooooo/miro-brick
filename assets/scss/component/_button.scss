@@ -26,6 +26,8 @@
         font-weight: 500;
         border-radius: 0.4rem;
         border: 0.1rem solid $gray-111;
+        font-family: 'Noto Sans KR';
+        transform: rotate(0.04deg);
 
         &:focus,
         &:active {
