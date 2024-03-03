@@ -520,12 +520,12 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
 }
 @media screen and (max-width: 833px) {
   .category .category__menu .category__menu-item .item {
-    width: 45%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   .category .category__menu .category__menu-item .item {
-    width: 22%;
+    width: 25%;
   }
 }
 .category .footer .footer__inner {

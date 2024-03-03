@@ -70,12 +70,12 @@
 
                 // MO
                 @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
-                    width: 45%;
+                    width: 50%;
                 }
 
                 // Tablet
                 @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
-                    width: 22%;
+                    width: 25%;
                 }
             }
         }
