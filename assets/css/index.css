@@ -352,13 +352,13 @@ header .header__inner-right .header__inner-icon {
 @media screen and (max-width: 833px) {
   .footer .footer__inner {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 40px 20px 80px;
   }
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   .footer .footer__inner {
     flex-direction: column;
-    padding: 40px 28px;
+    padding: 40px 28px 80px;
   }
 }
 @media screen and (max-width: 1311px) {
@@ -1272,8 +1272,11 @@ input[type=file] {
 }
 
 .tel__info {
-  display: inline-flex;
+  display: none;
   align-items: center;
+  position: fixed;
+  bottom: 18px;
+  left: 20px;
   height: 44px;
   margin: 50px 0 0;
   padding: 0 24px;
@@ -1383,9 +1386,10 @@ input[type=file] {
   .tel__info {
     display: flex;
     align-items: center;
+    position: static;
     width: 474px;
     height: 60px;
-    margin: 88px 0 0;
+    margin: 88px 0 -68px;
     padding: 0 36px;
     border-radius: 99px;
     color: #fff;
@@ -1587,6 +1591,9 @@ input[type=file] {
   main {
     padding: 2rem;
   }
+  main.main .tel__info {
+    display: flex;
+  }
   main.board {
     padding: 0 0 6rem;
   }
@@ -1637,7 +1644,7 @@ input[type=file] {
     padding-bottom: 2rem;
   }
   main.product {
-    padding: 0;
+    padding-top: 0;
   }
   main.product .navigation {
     margin-bottom: 40px;
@@ -2033,9 +2040,6 @@ input[type=file] {
     line-height: 2.8rem;
   }
 }
-.main {
-  padding-bottom: 6rem;
-}
 .main .swiper.is-main-banner {
   padding-bottom: 2rem;
 }
@@ -2125,9 +2129,6 @@ input[type=file] {
   }
 }
 @media screen and (min-width: 1312px) {
-  .main {
-    padding-bottom: 12rem;
-  }
   .main .main__content + .main__content {
     margin-top: 6rem;
   }

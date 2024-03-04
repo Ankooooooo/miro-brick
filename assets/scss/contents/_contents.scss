@@ -5,6 +5,12 @@ main {
     @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
         padding: 2rem;
 
+        &.main {
+            .tel__info {
+                display: flex;
+            }
+        }
+
         &.board {
             padding: 0 0 6rem;
 
@@ -66,7 +72,7 @@ main {
         }
 
         &.product {
-            padding: 0;
+            padding-top: 0;
 
 
             .navigation {
@@ -601,7 +607,7 @@ main {
 
 // Main page
 .main {
-    padding-bottom: 6rem;
+    // padding-bottom: 6rem;
     .swiper {
         &.is-main-banner {
             padding-bottom: 2rem;
@@ -716,7 +722,7 @@ main {
 
     // PC
     @media screen and (min-width: #{$breakpoint-pc}) {
-        padding-bottom: 12rem;
+        // padding-bottom: 12rem;
         .main__content {
             + .main__content {
                 margin-top: 6rem;
