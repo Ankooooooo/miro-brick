@@ -140,3 +140,9 @@ body > footer .footer__content {
         }
     }
 }
+
+@media screen and (max-width: #{$breakpoint-pc - 1px}) {
+    .header:is(.sub) ~ .footer {
+        display: none;
+    }
+}

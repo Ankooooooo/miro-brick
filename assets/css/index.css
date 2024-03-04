@@ -454,6 +454,11 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   transform: rotate(-180deg);
 }
 
+@media screen and (max-width: 1311px) {
+  .header:is(.sub) ~ .footer {
+    display: none;
+  }
+}
 .category {
   position: fixed;
   top: 0;

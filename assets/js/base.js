@@ -26,18 +26,6 @@ function findViewPort() {
     else window.viewport = 'pc'
 }
 
-function handleChangeFooterState() {
-    const footer = document.querySelector("body > footer");
-
-    if (!footer) return false;
-
-    if (window.viewport !== 'pc' && !!window.title) {
-        footer.style.display = 'none';
-    } else {
-        footer.style.display = '';
-    }
-}
-
 // 메뉴별 타이틀 설정
 function setHeaderTitle(title) {
     const el_header = document.querySelector('body > header');
@@ -211,7 +199,6 @@ window.addEventListener('load', function () {
         setHeaderTitle(window.title);
         setSelectedNaviation(window.subTitle);
         headerFixedTop();
-        handleChangeFooterState();
     });
     toggle();
     changeDetailNavigation();
@@ -221,7 +208,6 @@ window.addEventListener('load', function () {
 window.addEventListener('resize', function () {
     findViewPort();
     headerFixedTop();
-    handleChangeFooterState();
     changeDetailNavigation();
 });
 
