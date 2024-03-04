@@ -163,7 +163,7 @@ function headerFixedTop() {
         el.navigation.style.top = isPc ? '' : `${height['header']}px` ;
     }
 
-    el.main.style.top = isPc ? '' : `${height['header'] + height['nav']}px`;
+    el.main.style.marginTop = isPc ? '' : `${height['header'] + height['nav']}px`;
 }
 
 window.isTop = false;
