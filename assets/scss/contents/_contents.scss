@@ -6,7 +6,7 @@ main {
         padding: 2rem;
 
         &.board {
-            padding: 0 0 8rem;
+            padding: 0 0 6rem;
 
             &:has(.qna) {
                 padding-bottom: 8rem;
@@ -16,7 +16,8 @@ main {
                 padding-bottom: 12rem;
 
                 + .scrollTopBtn {
-                    bottom: 6rem;
+                    padding-bottom: 0;
+                    bottom: 8rem;
                 }
             }
         }
@@ -58,6 +59,10 @@ main {
 
         &.board {
             padding: 4rem 0 12rem;
+
+            + .scrollTopBtn {
+                padding-bottom: 2rem;
+            }
         }
 
         &.product {
@@ -103,6 +108,10 @@ main {
 
 // qna, notice - board
 .board {
+    .qna {
+        padding-bottom: 6rem;
+    }
+
     .board__list {
         margin-top: -2rem;
 
@@ -178,9 +187,10 @@ main {
     .board__footer {
         position: fixed;
         left: 0;
-        bottom: 1.2rem;
+        bottom: 0;
         padding: 0 2rem;
         width: 100%;
+        height: 6rem;
 
         .pagination {
             display: none;
@@ -215,6 +225,10 @@ main {
         .form__textarea {
             height: 20rem;
         }
+    }
+
+    .board__write {
+        padding-bottom: 6rem;
     }
 
     .file {
@@ -271,6 +285,8 @@ main {
     }
 
     .board__detail {
+        padding-bottom: 6rem;
+
         .board__title {
             font-weight: 700;
         }
@@ -412,6 +428,12 @@ main {
             span {
                 font-size: 1.3rem;;
             }
+        }
+
+        .board__write,
+        .board__detail,
+        .qna {
+            padding-bottom: 0;
         }
 
         .board__footer {

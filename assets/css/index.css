@@ -1588,7 +1588,7 @@ input[type=file] {
     padding: 2rem;
   }
   main.board {
-    padding: 0 0 8rem;
+    padding: 0 0 6rem;
   }
   main.board:has(.qna) {
     padding-bottom: 8rem;
@@ -1597,7 +1597,8 @@ input[type=file] {
     padding-bottom: 12rem;
   }
   main.board.is-qna + .scrollTopBtn {
-    bottom: 6rem;
+    padding-bottom: 0;
+    bottom: 8rem;
   }
   main.product {
     padding: 0;
@@ -1632,6 +1633,9 @@ input[type=file] {
   main.board {
     padding: 4rem 0 12rem;
   }
+  main.board + .scrollTopBtn {
+    padding-bottom: 2rem;
+  }
   main.product {
     padding: 0;
   }
@@ -1664,6 +1668,9 @@ input[type=file] {
   transition: transform ease 0.3s;
 }
 
+.board .qna {
+  padding-bottom: 6rem;
+}
 .board .board__list {
   margin-top: -2rem;
 }
@@ -1727,9 +1734,10 @@ input[type=file] {
 .board .board__footer {
   position: fixed;
   left: 0;
-  bottom: 1.2rem;
+  bottom: 0;
   padding: 0 2rem;
   width: 100%;
+  height: 6rem;
 }
 .board .board__footer .pagination {
   display: none;
@@ -1752,6 +1760,9 @@ input[type=file] {
 }
 .board .board__form .form__textarea {
   height: 20rem;
+}
+.board .board__write {
+  padding-bottom: 6rem;
 }
 .board .file .file__list {
   margin-top: 0.6rem;
@@ -1791,6 +1802,9 @@ input[type=file] {
 .board .board__password .btn {
   flex-shrink: 0;
   width: 6.8rem;
+}
+.board .board__detail {
+  padding-bottom: 6rem;
 }
 .board .board__detail .board__title {
   font-weight: 700;
@@ -1896,6 +1910,11 @@ input[type=file] {
   }
   .board .board__info span {
     font-size: 1.3rem;
+  }
+  .board .board__write,
+  .board .board__detail,
+  .board .qna {
+    padding-bottom: 0;
   }
   .board .board__footer {
     position: relative;
