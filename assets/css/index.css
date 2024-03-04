@@ -1277,6 +1277,7 @@ input[type=file] {
 }
 
 .tel__info {
+  z-index: 10;
   display: none;
   align-items: center;
   position: fixed;
@@ -1592,6 +1593,9 @@ input[type=file] {
   }
 }
 /* contents */
+main.main {
+  padding-bottom: 6rem !important;
+}
 @media screen and (max-width: 833px) {
   main {
     padding: 2rem;
@@ -1641,6 +1645,9 @@ input[type=file] {
     width: 1312px;
     margin: auto;
     padding: 4rem 0;
+  }
+  main.main .tel__info {
+    margin-bottom: -88px;
   }
   main.board {
     padding: 4rem 0 12rem;
@@ -2200,6 +2207,7 @@ input[type=file] {
     line-height: 1.5;
     color: #111;
     background-image: none;
+    background-color: #fff;
   }
   .main .main__content-title span::before {
     content: "";

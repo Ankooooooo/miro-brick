@@ -1,6 +1,9 @@
 
 // 메인
 main {
+    &.main {
+        padding-bottom: 6rem !important;
+    }
     // MO
     @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
         padding: 2rem;
@@ -62,6 +65,12 @@ main {
         width: $breakpoint-pc;
         margin: auto;
         padding: 4rem 0;
+
+        &.main {
+            .tel__info {
+                margin-bottom: -88px;
+            }
+        }
 
         &.board {
             padding: 4rem 0 12rem;
@@ -808,6 +817,7 @@ main {
                 line-height: 1.5;
                 color: #111;
                 background-image: none;
+                background-color: #fff;
 
                 &::before {
                     content: "";
