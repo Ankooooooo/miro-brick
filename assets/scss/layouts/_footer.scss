@@ -74,6 +74,14 @@
         margin-bottom: 12px;
         overflow: hidden;
 
+        .email .info__content {
+            text-decoration: underline;
+
+            &:hover {
+                color: #FF8E2A;
+            }
+        }
+
 
         li {
             display: flex;

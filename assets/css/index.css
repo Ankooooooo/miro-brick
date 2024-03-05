@@ -406,6 +406,12 @@ header .header__inner-right .header__inner-icon {
   margin-bottom: 12px;
   overflow: hidden;
 }
+.footer .footer__content-info .email .info__content {
+  text-decoration: underline;
+}
+.footer .footer__content-info .email .info__content:hover {
+  color: #FF8E2A;
+}
 .footer .footer__content-info li {
   display: flex;
 }
