@@ -140,6 +140,10 @@
         background-position: center;
         background-size: 4rem;
         background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='23.5' fill='white' fill-opacity='0.6' stroke='%23EEEEEE'/%3E%3Cpath d='M24.0004 16.1992V32.3992' stroke='%23666666' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M17.4004 22.1992L24.0004 15.5992L30.6004 22.1992' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+
+        &:hover {
+            background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23FF8E2A'/%3E%3Cpath d='M24 16.2002V32.4002' stroke='white' stroke-width='1.2' stroke-linecap='round'/%3E%3Cpath d='M17.4 22.2002L24 15.6002L30.6 22.2002' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        }
     }
 
     @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
@@ -155,6 +159,10 @@
             width: 4.8rem;
             height: 4.8rem;
             background-size: 4.8rem;
+
+            &:hover {
+                background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23FF8E2A'/%3E%3Cpath d='M20 13.5V27' stroke='white' stroke-width='1.2' stroke-linecap='round'/%3E%3Cpath d='M14.5 18.5L20 13L25.5 18.5' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            }
         }
     }
 
