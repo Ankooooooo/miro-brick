@@ -228,6 +228,10 @@
     <script src="/assets/vendors/swiper-bundle.min.js"></script>
     <script>
       const bannerSwiper = new Swiper(".is-main-banner", {
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
         loop: true,
         spaceBetween: 10,
         pagination: {
