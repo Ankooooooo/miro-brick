@@ -193,6 +193,44 @@ function topScroll() {
     })
 }
 
+// fileUploader 
+function addFiles(files, text) {
+    const fileName = files[0].name;
+
+    text.classList.remove('is-empty');
+    text.querySelector('span').innerText = fileName;
+}
+
+function fileUploader() {
+    let fileUploader = document.querySelectorAll('.file');
+
+    // file search input event 
+    fileUploader.forEach(function(el){
+        let fileInput = el.querySelector('.file__input');
+        let fileName = el.querySelector('.fileName');
+        let fileNameSpan = fileName.querySelector('span');
+        let fileDelete = el.querySelector('.file__delete');
+
+
+        fileInput.addEventListener('change', function(){
+            if( fileInput.files.length > 0 ){
+                fileName.classList.remove('is-empty');
+                fileNameSpan.innerText = fileInput.files[0].name;
+            }else if(fileInput.files.length = 0){
+                fileName.classList.add('is-empty');
+                fileNameSpan.innerText = '첨부한 파일이 없습니다.';
+            }
+        });
+
+        fileDelete.addEventListener('click', function(){
+            fileInput.value = null;
+            fileName.classList.add('is-empty');
+            fileNameSpan.innerText = '첨부한 파일이 없습니다.';
+        })
+    })
+
+}
+
 window.addEventListener('load', function () {
     findViewPort();
     includePath(() => {
@@ -203,6 +241,7 @@ window.addEventListener('load', function () {
     toggle();
     changeDetailNavigation();
     hadnleScroll();
+    fileUploader();
 });
 
 window.addEventListener('resize', function () {

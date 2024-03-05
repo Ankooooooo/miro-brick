@@ -811,7 +811,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
     background-image: url("/assets/images/icon/icon-more-plus-white.svg");
   }
   .btn.is-secondary {
-    padding: 0.4rem 1.6rem 0;
+    padding: 0 1.6rem;
     height: 4.8rem;
     font-size: 1.5rem;
   }
@@ -1785,17 +1785,18 @@ main.main {
 .board .board__write {
   padding-bottom: 6rem;
 }
-.board .file .file__list {
+.board .file .fileName {
   margin-top: 0.6rem;
+  font-size: 1.2rem;
 }
-.board .file .file__list li + li {
-  margin-top: 0.7rem;
-}
-.board .file .file__list li.is-empty {
+.board .file .fileName.is-empty {
   color: #888888;
   font-size: 1.2rem;
 }
-.board .file .file__list li span {
+.board .file .fileName.is-empty .file__delete {
+  display: none;
+}
+.board .file .fileName span {
   display: inline-block;
   max-width: calc(100% - 2.4rem);
   white-space: nowrap;
@@ -1804,7 +1805,7 @@ main.main {
   font-size: 1.2rem;
   vertical-align: middle;
 }
-.board .file .file__list .file__delete {
+.board .file .fileName .file__delete {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -1985,22 +1986,13 @@ main.main {
   .board .board__flex.is-col-3 .board__form {
     width: calc(100% - 6.4rem);
   }
-  .board .file .file__list {
+  .board .file .fileName {
     margin-top: 0.8rem;
   }
-  .board .file .file__list li {
-    display: inline-block;
-  }
-  .board .file .file__list li + li {
-    margin-left: 0.8rem;
-    margin-top: 0;
-  }
-  .board .file .file__list li.is-empty {
+  .board .file .fileName span {
     font-size: 1.3rem;
-  }
-  .board .file .file__list li span {
     max-width: 35.3rem;
-    font-size: 1.3rem;
+    line-height: 2rem;
   }
   .board .board__password {
     padding: 12rem 0 16.5rem;

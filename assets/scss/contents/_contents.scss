@@ -247,28 +247,27 @@ main {
     }
 
     .file {
-        .file__list {
+        .fileName {
             margin-top: 0.6rem;
-            
-            li {
-                + li {
-                    margin-top: 0.7rem;
-                }
+            font-size: 1.2rem;
 
-                &.is-empty {
-                    color: $gray-888;
-                    font-size: 1.2rem;
-                }
+            &.is-empty {
+                color: $gray-888;
+                font-size: 1.2rem;
 
-                span {
-                    display: inline-block;
-                    max-width: calc(100% - 2.4rem);
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    font-size: 1.2rem;
-                    vertical-align: middle;
+                .file__delete {
+                    display: none;
                 }
+            }
+
+            span {
+                display: inline-block;
+                max-width: calc(100% - 2.4rem);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 1.2rem;
+                vertical-align: middle;
             }
 
             .file__delete {
@@ -513,25 +512,13 @@ main {
         }
 
         .file {
-            .file__list {
+            .fileName {
                 margin-top: 0.8rem;
-
-                li {
-                    display: inline-block;
-
-                    + li {
-                        margin-left: 0.8rem;
-                        margin-top: 0;
-                    }
-
-                    &.is-empty {
-                        font-size: 1.3rem;
-                    }
-
-                    span {
-                        max-width: 35.3rem;
-                        font-size: 1.3rem;
-                    }
+                
+                span {
+                    font-size: 1.3rem;
+                    max-width: 35.3rem;
+                    line-height: 2rem;
                 }
             }
         }

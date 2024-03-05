@@ -45,12 +45,26 @@
 
             <div class="board__form">
                 <div class="board__formLabel">첨부파일</div>
-                <div class="file" id="multipleUploader-1"></div>
+                <div class="file">
+                    <label for="fileUploader1" class="btn is-secondary file__search">파일 선택</label>
+                    <input type="file" id="fileUploader1" style="display:none" class="file__input"/>
+                    <p class="fileName is-empty">
+                        <span class="test">첨부한 파일이 없습니다.</span>    
+                        <button type="button" class="file__delete"></button>
+                    </p>
+                </div>
             </div>
 
             <div class="board__form">
                 <div class="board__formLabel">이미지 첨부</div>
-                <div class="file" id="multipleUploader-2"></div>
+                <div class="file">
+                    <label for="fileUploader2" class="btn is-secondary file__search">파일 선택</label>
+                    <input type="file" id="fileUploader2" style="display:none" class="file__input"/>
+                    <div class="fileName is-empty">
+                        <span class="test">첨부한 파일이 없습니다.</span>
+                        <button type="button" class="file__delete"></button>
+                    </div>
+                </div>
             </div>
 
             <div class="board__form">
@@ -84,14 +98,6 @@
     <!-- Footer -->
     <div data-include-path="/layouts/footer.html"></div>
 </body>
-<script>
-    let multiUploader;
-
-    window.addEventListener("DOMContentLoaded", function () {
-        multiUploader1 = new dsMultiUpload('multipleUploader-1');
-        multiUploader2 = new dsMultiUpload('multipleUploader-2');
-    });
-</script>
 </html>
 
 <script>
