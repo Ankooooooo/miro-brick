@@ -1597,6 +1597,10 @@ input[type=file] {
   }
 }
 /* contents */
+body:has(.category.open) .scrollTopBtn {
+  display: none !important;
+}
+
 main.main {
   padding-bottom: 6rem !important;
 }

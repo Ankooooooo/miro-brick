@@ -1,4 +1,12 @@
 
+body {
+    &:has(.category.open){
+        .scrollTopBtn {
+            display: none !important;
+        }
+    }
+}
+
 // 메인
 main {
     &.main {
