@@ -7,7 +7,7 @@ body {
     }
 
     @media screen and (max-width: #{$breakpoint-pc - 1px}) {
-        &:has(.product){
+        &:has(main.product){
             .footer {
                 display: none !important;
             }
