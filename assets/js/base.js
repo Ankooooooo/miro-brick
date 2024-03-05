@@ -32,7 +32,7 @@ function setHeaderTitle(title) {
 
     if (el_header?.className.includes('sub')) {
         const el = document.querySelector("body > header .header__title");
-        el.innerText = title;
+        el.innerText = window.isDetail && window.detailTitle ? window.detailTitle : title;
     }
 
     const elements = document.querySelectorAll('body > header .header__inner-menu [label]');
