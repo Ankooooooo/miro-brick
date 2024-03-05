@@ -424,6 +424,7 @@ header .header__inner-right .header__inner-icon {
   font-size: 12px;
   line-height: 16px;
   margin-left: 6px;
+  color: #666;
 }
 .footer .copyright {
   font-size: 12px;
@@ -757,6 +758,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   border: 0.1rem solid #111111;
   font-family: "Noto Sans KR";
   transform: rotate(0.04deg);
+  color: #111;
 }
 .btn.is-secondary:focus, .btn.is-secondary:active {
   background-color: #FF8E2A;
