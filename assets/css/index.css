@@ -1601,7 +1601,7 @@ body:has(.category.open) .scrollTopBtn {
   display: none !important;
 }
 @media screen and (max-width: 1311px) {
-  body:has(main.product) .footer {
+  body:has(main.product) > .footer {
     display: none !important;
   }
 }
