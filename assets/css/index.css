@@ -746,7 +746,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   color: #fff;
   background-color: #FF8E2A;
 }
-.btn.is-primary:focus, .btn.is-primary:active {
+.btn.is-primary:focus, .btn.is-primary:active, .btn.is-primary:hover {
   background-color: #CA6307;
 }
 .btn.is-secondary {
@@ -760,7 +760,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   transform: rotate(0.04deg);
   color: #111;
 }
-.btn.is-secondary:focus, .btn.is-secondary:active {
+.btn.is-secondary:focus, .btn.is-secondary:active, .btn.is-secondary:hover {
   background-color: #FF8E2A;
   border-color: #FF8E2A;
   color: #fff;
@@ -785,15 +785,15 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
   transform: translateY(-50%);
   background-image: url("/assets/images/icon/icon-more-arrow.svg");
 }
-.btn.is-more:focus, .btn.is-more:active {
+.btn.is-more:focus, .btn.is-more:active, .btn.is-more:hover {
   background-color: #FF8E2A;
   border-color: #FF8E2A;
   color: #fff;
 }
-.btn.is-more:focus strong, .btn.is-more:active strong {
+.btn.is-more:focus strong, .btn.is-more:active strong, .btn.is-more:hover strong {
   color: #fff !important;
 }
-.btn.is-more:focus::after, .btn.is-more:active::after {
+.btn.is-more:focus::after, .btn.is-more:active::after, .btn.is-more:hover::after {
   background-image: url("/assets/images/icon/icon-more-arrow-white.svg");
 }
 @media screen and (min-width: 1312px) {
@@ -809,7 +809,7 @@ body > footer .footer__content:not(.open) .footer__content-title::after {
     left: 1.6rem;
     background-image: url("/assets/images/icon/icon-more-plus.svg");
   }
-  .btn.is-more:focus::after, .btn.is-more:active::after {
+  .btn.is-more:focus::after, .btn.is-more:active::after, .btn.is-more:hover::after {
     background-image: url("/assets/images/icon/icon-more-plus-white.svg");
   }
   .btn.is-secondary {

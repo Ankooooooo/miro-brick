@@ -14,7 +14,7 @@
         color: #fff;
         background-color: $primary;
 
-        &:focus, &:active {
+        &:focus, &:active, &:hover {
             background-color: #CA6307;
         }
     }
@@ -31,7 +31,8 @@
         color: #111;
 
         &:focus,
-        &:active {
+        &:active,
+        &:hover {
             background-color: $primary;
             border-color: $primary;
             color: #fff;
@@ -64,7 +65,8 @@
         }
 
         &:focus,
-        &:active {
+        &:active,
+        &:hover {
             background-color: $primary;
             border-color: $primary;
             color: #fff;
@@ -98,7 +100,8 @@
             }
 
             &:focus,
-            &:active {
+            &:active,
+            &:hover {
                 &::after {
                     background-image: url('/assets/images/icon/icon-more-plus-white.svg');
                 }
