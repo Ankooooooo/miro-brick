@@ -5,6 +5,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 0;
 
   .img {
     width: 100%;
@@ -30,8 +31,9 @@
 
   // product list
   &.is-product {
-    margin-top: 20px;
     gap: 16px;
+    padding: 20px;
+
     > li {
       width: calc((100% / 2) - 8px);
     }
@@ -138,7 +140,7 @@
     // gallery list
     &.is-gallery {
       > li {
-        width: calc((100% / 2) - 20px);
+        width: calc((100% / 2) - 10px);
       }
       .img__title {
         font-size: 18px;
@@ -170,6 +172,8 @@
     // product list
     &.is-product {    
       gap: 20px;
+      padding: 0;
+
       > li {
         width: calc((100% / 4) - 15px);
       }

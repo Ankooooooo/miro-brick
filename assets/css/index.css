@@ -1233,6 +1233,7 @@ input[type=file] {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 0;
 }
 .img__list .img {
   width: 100%;
@@ -1255,8 +1256,8 @@ input[type=file] {
   color: #888888;
 }
 .img__list.is-product {
-  margin-top: 20px;
   gap: 16px;
+  padding: 20px;
 }
 .img__list.is-product > li {
   width: calc(50% - 8px);
@@ -1349,7 +1350,7 @@ input[type=file] {
     border-radius: 8px;
   }
   .img__list.is-gallery > li {
-    width: calc(50% - 20px);
+    width: calc(50% - 10px);
   }
   .img__list.is-gallery .img__title {
     font-size: 18px;
@@ -1374,6 +1375,7 @@ input[type=file] {
   }
   .img__list.is-product {
     gap: 20px;
+    padding: 0;
   }
   .img__list.is-product > li {
     width: calc(25% - 15px);
