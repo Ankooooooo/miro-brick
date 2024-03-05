@@ -3,7 +3,7 @@
   &.is-main-banner {
     --swiper-navigation-sides-offset: 2rem;
 
-    margin: -2rem -2rem 0;
+    margin-top: -2rem;
     padding: 0 2rem;
 
     .swiper-wrapper {
@@ -79,7 +79,7 @@
 
     // PC
     @media screen and (min-width: #{$breakpoint-pc}) {
-      margin: -4rem 0 0;
+      margin: -4rem 0 0 0;
       padding: 0;
       .swiper-wrapper {
         height: 60rem;
