@@ -1598,6 +1598,10 @@ input[type=file] {
 main.main {
   padding-bottom: 6rem !important;
 }
+main.main .main__content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 @media screen and (max-width: 833px) {
   main {
     padding: 2rem;

@@ -3,6 +3,11 @@
 main {
     &.main {
         padding-bottom: 6rem !important;
+
+        .main__content {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
     // MO
     @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
