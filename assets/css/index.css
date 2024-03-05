@@ -1600,6 +1600,11 @@ input[type=file] {
 body:has(.category.open) .scrollTopBtn {
   display: none !important;
 }
+@media screen and (max-width: 1311px) {
+  body:has(.product) .footer {
+    display: none !important;
+  }
+}
 
 main.main {
   padding-bottom: 6rem !important;
