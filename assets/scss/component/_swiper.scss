@@ -124,6 +124,16 @@
     .swiper-slide {
       width: 20.8rem !important;
 
+      &:hover {
+        .main-gallery__image {
+          border: 0.2rem solid #FF8E2A; 
+        }
+
+        .main-gallery__title {
+          color: #FF8E2A;
+        }
+      }
+
       .main-gallery__image {
         overflow: hidden;
         height: 27.8rem !important;

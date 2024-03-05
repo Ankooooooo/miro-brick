@@ -681,6 +681,16 @@ main {
         display: grid;
         grid-template-columns: repeat(4,minmax(0,1fr));
         gap: 1.6rem;
+
+        a:hover {
+            span {
+                border: 0.2rem solid #FF8E2A;
+            }
+
+            p {
+                color: #FF8E2A;
+            }
+        }
     
         span {
             display: block;
