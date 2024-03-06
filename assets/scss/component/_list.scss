@@ -51,6 +51,8 @@
 
   // gallery list
   &.is-gallery {
+    margin-bottom: 0;
+
     > li {
       width: 100%;
     }
@@ -61,6 +63,10 @@
     }
     .img {
       height: 197px;
+    }
+
+    +.pagination {
+      margin: 40px 0 120px
     }
   }
 }

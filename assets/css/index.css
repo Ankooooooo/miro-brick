@@ -1451,6 +1451,9 @@ input[type=file] {
   font-weight: 500;
   line-height: 18px;
 }
+.img__list.is-gallery {
+  margin-bottom: 0;
+}
 .img__list.is-gallery > li {
   width: 100%;
 }
@@ -1461,6 +1464,9 @@ input[type=file] {
 }
 .img__list.is-gallery .img {
   height: 197px;
+}
+.img__list.is-gallery + .pagination {
+  margin: 40px 0 120px;
 }
 
 .product .no-data {
