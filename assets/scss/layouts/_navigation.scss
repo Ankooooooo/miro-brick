@@ -84,6 +84,7 @@
 .sub.navigation {
     padding: 0;
     margin-top: 0;
+    border: none;
 
      @media screen and (max-width: #{$breakpoint-pc - 1px}) {
          height: fit-content;
@@ -102,12 +103,14 @@
         @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
             padding: 12px 20px;
             flex-wrap: wrap;
+            gap: 0;
         }
 
         // Tablet
         @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
             padding: 12px 28px;
             flex-wrap: wrap;
+            gap: 0;
         }
 
         .navigation__item {
@@ -117,14 +120,19 @@
 
             // MO
             @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
-                width: 45%;
+                width: 50%;
+            }
+
+            // MO and Tablet
+            @media screen and (max-width: #{$breakpoint-pc - 1px}) {
                 text-align: left;
+                height: 36px;
+                line-height: 36px;
             }
             
             // Tablet
             @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
-                width: 22.2%;
-                text-align: left;
+                width: 25%;
             }
             // PC
             @media screen and (min-width: #{$breakpoint-pc}) {
