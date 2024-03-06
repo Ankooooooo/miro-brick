@@ -46,7 +46,7 @@ function setHeaderTitle(title) {
 
 // Navigation 선택된 메뉴 설정
 function setSelectedNaviation(title) {
-    const elements = document.querySelectorAll('.navigation [label]');
+    const elements = document.querySelectorAll('.navigation:not(.sub) [label]');
 
     elements.forEach(function (el) {
         if (el.getAttribute('label') === title) {
