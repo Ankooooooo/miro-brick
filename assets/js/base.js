@@ -232,6 +232,10 @@ function fileUploader() {
 }
 
 window.addEventListener('load', function () {
+    if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+        document.body.addEventListener('touchstart', function() {}, false);
+    }
+
     findViewPort();
     includePath(() => {
         setHeaderTitle(window.title);
