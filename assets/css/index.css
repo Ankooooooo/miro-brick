@@ -1376,6 +1376,10 @@ input[type=file] {
   background: linear-gradient(45deg, #FFA621, #FF862A);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
   font-size: 0;
+  transition: opacity ease 0.3s;
+}
+.tel__info.is-hide {
+  opacity: 0;
 }
 .tel__info > p {
   display: inline-block;
@@ -1439,9 +1443,6 @@ input[type=file] {
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
-  }
-  .tel__info {
-    display: flex;
   }
   .tel__info .info__tel {
     font-size: 0;
@@ -1509,10 +1510,6 @@ input[type=file] {
     font-weight: 700;
     background: linear-gradient(45deg, #FFA621, #FF862A);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-  }
-  .tel__info.is-hide {
-    opacity: 0;
-    transition: opacity ease 0.3s;
   }
   .tel__info .info__title {
     font-size: 18px;
@@ -1759,6 +1756,9 @@ main.main .main__content {
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   main {
     padding: 2.8rem;
+  }
+  main.main .tel__info {
+    display: flex;
   }
   main.board {
     padding-bottom: 8rem;
