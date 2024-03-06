@@ -238,10 +238,18 @@ window.addEventListener('load', function () {
 
     findViewPort();
     includePath(() => {
+        // html용
         setHeaderTitle(window.title);
         setSelectedNaviation(window.subTitle);
         headerFixedTop();
     });
+    
+    // == php용 ==
+    setHeaderTitle(window.title);
+    setSelectedNaviation(window.subTitle);
+    headerFixedTop();
+    // ===========
+
     toggle();
     changeDetailNavigation();
     hadnleScroll();
