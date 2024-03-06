@@ -1,5 +1,6 @@
 .img__view {
   color: $gray-111;
+  margin-bottom: 120px;
 
   .view__title {
     font-size: 24px;
@@ -120,6 +121,8 @@
 // PC
 @media screen and (min-width: #{$breakpoint-pc}) {
   .img__view {
+    margin-bottom: 0;
+
     .breadcrumb {
       display: block;
       margin: 0 0 24px;
