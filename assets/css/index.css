@@ -514,6 +514,7 @@ body > footer .footer__content:not(.open) .footer__content-title:hover::after, b
   height: 100%;
   background-color: white;
   transition: all 0.3s ease;
+  overflow-y: auto;
   z-index: 100;
 }
 .category.open {
@@ -522,6 +523,7 @@ body > footer .footer__content:not(.open) .footer__content-title:hover::after, b
 }
 .category .header {
   border-bottom: 1px solid #eee;
+  position: fixed;
 }
 .category .header .category__title {
   font-size: 17px;
@@ -530,8 +532,8 @@ body > footer .footer__content:not(.open) .footer__content-title:hover::after, b
   letter-spacing: -0.2px;
 }
 .category .category__menu {
-  height: calc(100% - 52px - 119px);
-  overflow-y: auto;
+  margin-top: 52px;
+  min-height: calc(100% - 52px - 119px - 80px);
 }
 @media screen and (max-width: 833px) {
   .category .category__menu {
@@ -579,6 +581,9 @@ body > footer .footer__content:not(.open) .footer__content-title:hover::after, b
   .category .category__menu .category__menu-item .item {
     width: 25%;
   }
+}
+.category .footer {
+  margin-top: 80px;
 }
 .category .footer .footer__inner {
   flex-direction: row;
@@ -718,6 +723,7 @@ body > footer .footer__content:not(.open) .footer__content-title:hover::after, b
 .sub.navigation {
   padding: 0;
   margin-top: 0;
+  border: none;
 }
 @media screen and (max-width: 1311px) {
   .sub.navigation {
@@ -736,12 +742,14 @@ body > footer .footer__content:not(.open) .footer__content-title:hover::after, b
   .sub.navigation .navigation__list {
     padding: 12px 20px;
     flex-wrap: wrap;
+    gap: 0;
   }
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   .sub.navigation .navigation__list {
     padding: 12px 28px;
     flex-wrap: wrap;
+    gap: 0;
   }
 }
 .sub.navigation .navigation__list .navigation__item {
@@ -751,14 +759,19 @@ body > footer .footer__content:not(.open) .footer__content-title:hover::after, b
 }
 @media screen and (max-width: 833px) {
   .sub.navigation .navigation__list .navigation__item {
-    width: 45%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1311px) {
+  .sub.navigation .navigation__list .navigation__item {
     text-align: left;
+    height: 36px;
+    line-height: 36px;
   }
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   .sub.navigation .navigation__list .navigation__item {
-    width: 22.2%;
-    text-align: left;
+    width: 25%;
   }
 }
 @media screen and (min-width: 1312px) {
@@ -1247,6 +1260,24 @@ input[type=file] {
 .swiper.is-product-view .swiper-button-next,
 .swiper.is-product-view .swiper-button-prev {
   display: none;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+.swiper.is-product-view .swiper-button-next::after,
+.swiper.is-product-view .swiper-button-prev::after {
+  display: none;
+}
+.swiper.is-product-view .swiper-button-next {
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='black' fill-opacity='0.12'/%3E%3Cpath d='M21 16L29 24L21 32' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+.swiper.is-product-view .swiper-button-next:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23FF8E2A'/%3E%3Cpath d='M21 16L29 24L21 32' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+.swiper.is-product-view .swiper-button-prev {
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='black' fill-opacity='0.12'/%3E%3Cpath d='M27 16L19 24L27 32' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+.swiper.is-product-view .swiper-button-prev:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23FF8E2A'/%3E%3Cpath d='M27 16L19 24L27 32' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {
   .swiper.is-product-view {
@@ -1268,6 +1299,10 @@ input[type=file] {
   .swiper.is-product-view .swiper-slide {
     overflow: hidden;
     border-radius: 1.2rem;
+  }
+  .swiper.is-product-view .swiper-button-next,
+  .swiper.is-product-view .swiper-button-prev {
+    display: block;
   }
 }
 .swiper .swiper-pagination {
