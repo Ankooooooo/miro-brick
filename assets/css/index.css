@@ -1523,6 +1523,27 @@ input[type=file] {
     font-weight: 700;
     line-height: 26px;
   }
+  .tel__info {
+    display: flex;
+  }
+  .tel__info .info__tel {
+    font-size: 0;
+  }
+  .tel__info .info__tel .tel {
+    font-size: 15px;
+  }
+  .tel__info .info__tel .tel:not(:first-child):before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 3px;
+    margin: 0 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .tel__info .info__tel .tel.home {
+    display: inline-block;
+  }
 }
 @media screen and (min-width: 1312px) {
   .img__list {
@@ -1565,7 +1586,8 @@ input[type=file] {
   .tel__info {
     display: flex;
     align-items: center;
-    position: static;
+    position: sticky;
+    bottom: 40px;
     width: 474px;
     height: 60px;
     margin: 88px 0 -68px;
@@ -1575,6 +1597,10 @@ input[type=file] {
     font-weight: 700;
     background: linear-gradient(45deg, #FFA621, #FF862A);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  }
+  .tel__info.is-hide {
+    opacity: 0;
+    transition: opacity ease 0.3s;
   }
   .tel__info .info__title {
     font-size: 18px;
