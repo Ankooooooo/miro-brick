@@ -193,6 +193,14 @@ function topScroll() {
     })
 }
 
+function telScroll() {
+    const telScroll = document.querySelector('.tel__info');
+
+    if(!telScroll) return;
+
+    window.scrollY > 0 ? telScroll.classList.remove('is-hide') : telScroll.classList.add('is-hide');
+}
+
 // fileUploader 
 function addFiles(files, text) {
     const fileName = files[0].name;
@@ -253,4 +261,5 @@ window.addEventListener('resize', function () {
 window.addEventListener('scroll', function() {
     hadnleScroll();
     topScroll();
+    telScroll();
 })
