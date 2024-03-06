@@ -243,17 +243,16 @@ window.addEventListener('load', function () {
         setSelectedNaviation(window.subTitle);
         headerFixedTop();
     });
+    toggle();
+    changeDetailNavigation();
+    hadnleScroll();
+    fileUploader();
     
     // == php용 ==
     setHeaderTitle(window.title);
     setSelectedNaviation(window.subTitle);
     headerFixedTop();
     // ===========
-
-    toggle();
-    changeDetailNavigation();
-    hadnleScroll();
-    fileUploader();
 });
 
 window.addEventListener('resize', function () {
