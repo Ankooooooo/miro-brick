@@ -67,10 +67,11 @@ main {
     @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
         padding: 2.8rem;
 
-        // &.main {
-        //     padding-left: 0;
-        //     padding-right: 0;
-        // }
+        &.main {
+            .tel__info {
+                display: flex;
+            }
+        }
 
         &.board {
             padding-bottom: 8rem;
