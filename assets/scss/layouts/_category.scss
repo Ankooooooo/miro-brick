@@ -6,6 +6,7 @@
     height: 100%;
     background-color: white;
     transition: all 0.3s ease;
+    overflow-y: auto;
     z-index: 100;
 
     &.open {
@@ -15,6 +16,7 @@
 
     .header {
         border-bottom: 1px solid #eee;
+        position: fixed;
 
         .category__title {
             font-size: 17px;
@@ -25,8 +27,8 @@
     }
 
     .category__menu {
-        height: calc(100% - 52px - 119px);
-        overflow-y: auto;
+        margin-top: 52px;
+        min-height: calc(100% - 52px - 119px - 80px);
 
         // MO
         @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
@@ -82,6 +84,8 @@
     }
 
     .footer {
+        margin-top: 80px;
+        
         .footer__inner {
             flex-direction: row;
 
