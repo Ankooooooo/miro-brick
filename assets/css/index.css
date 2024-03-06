@@ -401,13 +401,19 @@ header .header__inner-right .header__inner-icon {
   cursor: pointer;
   color: #666666;
 }
+.footer .footer__content-title:hover, .footer .footer__content-title:focus, .footer .footer__content-title:active {
+  color: #FF8E2A;
+}
+.footer .footer__content-title:hover::after, .footer .footer__content-title:focus::after, .footer .footer__content-title:active::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 4.5L6 7.5L3 4.5' stroke='%23FF8E2A' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
 @media screen and (max-width: 360px) {
   .footer .footer__content-title {
     font-size: 15px;
     line-height: 16px;
   }
 }
-.footer .footer__content-title:after {
+.footer .footer__content-title::after {
   content: "";
   transition: all 0.3s ease;
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7.5L6 4.5L9 7.5' stroke='%23666666' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
@@ -472,6 +478,16 @@ header .header__inner-right .header__inner-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.footer .footer__icon .circle__gray:hover {
+  border-color: #FF8E2A;
+  background-color: #FF8E2A;
+}
+.footer .footer__icon .icon_naver_mo:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_250_97513)'%3E%3Cpath d='M14.3158 18.45H13.8946L13.6753 18.8097L12.2135 21.2085C12.1161 21.3684 11.8839 21.3684 11.7865 21.2085L10.3247 18.8097L10.1054 18.45H9.68421H5C3.20508 18.45 1.75 16.9949 1.75 15.2V7C1.75 5.20507 3.20507 3.75 5 3.75H19C20.7949 3.75 22.25 5.20507 22.25 7V15.2C22.25 16.9949 20.7949 18.45 19 18.45H14.3158Z' stroke='white' stroke-width='1.5'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.1989 13.9297C18.1129 14.0541 17.9265 14.22 17.783 14.3082C17.5489 14.443 17.4629 14.4636 17.0327 14.4792L16.5404 14.5V13.4531H16.7602C17.1427 13.4531 17.3625 13.2301 17.4293 12.7792L17.4628 12.5509L17.3291 12.6651C17.1618 12.8101 16.875 12.8932 16.5308 12.8983C16.3159 12.8983 16.1916 12.862 15.9477 12.7325C15.4029 12.4422 15.2022 12.0431 15.2022 11.2448C15.2022 10.2911 15.6036 9.70008 16.3684 9.52905C16.7747 9.4409 17.1282 9.52905 17.3912 9.78824L17.4964 9.89187V9.5653H18.5V11.3692C18.5 13.3753 18.4809 13.5256 18.1989 13.9297ZM8.72119 12.0067C8.59691 12.2917 8.33407 12.5821 8.06167 12.7169V12.7171C7.60754 12.9502 7.12017 12.9449 6.78562 12.7014C6.56578 12.5458 6.55133 12.5458 6.55133 12.6753C6.55133 12.7792 6.52749 12.7844 6.03994 12.7688L5.52384 12.7531L5.50939 10.462L5.5 8.16593H6.55133V9.89207L6.66134 9.78824C7.00058 9.45128 7.62199 9.40465 8.10936 9.67951C8.34365 9.8141 8.6352 10.1979 8.73076 10.5035C8.85992 10.9078 8.85504 11.6801 8.72119 12.0067ZM14.5044 11.9808C14.3467 12.2868 13.95 12.6548 13.6585 12.7688C13.1805 12.9606 12.607 12.9345 12.1911 12.7014C11.9043 12.5407 11.5889 12.1726 11.4503 11.8357C11.3356 11.5557 11.3213 11.4728 11.3403 11.1257C11.3548 10.8146 11.3929 10.6694 11.4982 10.4518C11.8325 9.78824 12.5974 9.41504 13.3048 9.5653C14.4327 9.80391 15.0254 10.996 14.5044 11.9808ZM10.6378 9.22853L10.6521 11.0011L10.6663 12.7792H9.6103V9.50319L9.44773 9.32707C9.35686 9.22853 9.25173 9.15076 9.20874 9.15076C9.1419 9.15076 9.13233 9.06769 9.13233 8.57538V8L9.33772 8.03624C9.91125 8.13988 10.2602 8.39926 10.4801 8.88119L10.6378 9.22853ZM16.4036 10.8608C16.2172 11.1927 16.3415 11.6592 16.6569 11.8043C16.8431 11.8925 16.9293 11.8976 17.1063 11.8251C17.4647 11.6797 17.6128 11.3016 17.4647 10.9333C17.264 10.441 16.6619 10.3997 16.4036 10.8608ZM6.92122 10.664C6.5388 10.8608 6.50069 11.4828 6.85438 11.7473C7.09319 11.9287 7.54732 11.8043 7.68118 11.5193C7.94889 10.9594 7.44688 10.3944 6.92122 10.664ZM12.5086 11.5978C12.5571 11.6708 12.6188 11.7323 12.69 11.7785C13.1107 12.0582 13.6315 11.7162 13.6315 11.1616C13.6315 10.9698 13.6029 10.9077 13.4452 10.7364C13.2874 10.5603 13.2301 10.5345 13.0533 10.5345C12.7855 10.5345 12.6374 10.6173 12.4989 10.8401C12.4523 10.9145 12.4202 10.9985 12.4045 11.0868C12.3889 11.1752 12.3901 11.2661 12.408 11.3539C12.4259 11.4418 12.4601 11.5248 12.5086 11.5978Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_250_97513'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+.footer .footer__icon .icon_instagram_mo:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_250_97509)'%3E%3Crect x='2.75' y='2.75' width='18.5' height='18.5' rx='4.25' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='12' cy='12' r='4.75' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='17.6999' cy='6.3' r='1.3' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_250_97509'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }
 
 body > footer .footer__content:not(.open) .footer__content-info {
@@ -2252,9 +2268,6 @@ main.main .main__content {
   .main .main__content.is-between .main__content-inner .main__content-title h1 {
     font-size: 2.8rem;
   }
-  .main .main__content.is-between .main__content-inner .main__board-item {
-    background-color: #FFF;
-  }
   .main .main__content.is-between .main__content-inner .main__board-item a {
     padding-bottom: 1.4rem;
     font-size: 1.5rem;
@@ -2303,6 +2316,17 @@ main.main .main__content {
     height: 1.2rem;
     margin-right: 0.4rem;
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1.75' y1='6' x2='10.25' y2='6' stroke='%23111111' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='6' y1='1.75' x2='6' y2='10.25' stroke='%23111111' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  }
+  .main .main__content-title span:focus, .main .main__content-title span:active, .main .main__content-title span:hover {
+    background-color: #FF8E2A;
+    border-color: #FF8E2A;
+    color: #fff;
+  }
+  .main .main__content-title span:focus strong, .main .main__content-title span:active strong, .main .main__content-title span:hover strong {
+    color: #fff !important;
+  }
+  .main .main__content-title span:focus::before, .main .main__content-title span:active::before, .main .main__content-title span:hover::before {
+    background-image: url("/assets/images/icon/icon-more-plus-white.svg");
   }
   .main .main__content-title:focus span, .main .main__content-title:active span {
     border-color: #FF8E2A;
