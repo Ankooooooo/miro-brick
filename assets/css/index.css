@@ -1096,9 +1096,20 @@ input[type=file] {
 .swiper.is-main-banner .swiper-pagination {
   bottom: 3.2rem;
 }
-@media screen and (max-width: 833px) {
+@media screen and (max-width: 389px) {
   .swiper.is-main-banner .swiper-wrapper {
     height: 43rem;
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 1311px) {
+  .swiper.is-main-banner .swiper-wrapper {
+    height: 47rem;
+  }
+  .swiper.is-main-banner .swiper-slide {
+    height: 41rem;
+  }
+  .swiper.is-main-banner .swiper-slide.swiper-slide-active {
+    height: 47rem;
   }
 }
 @media screen and (min-width: 834px) and (max-width: 1311px) {
@@ -2202,6 +2213,12 @@ main.main .main__content {
   text-indent: -999em;
   color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_316_18066)'%3E%3Cpath d='M9 6.5L15 12L9 17.5' stroke='%23111111' stroke-width='1.5' stroke-linecap='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_316_18066'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+.main .main__content-title:active h1 {
+  color: #FF8E2A;
+}
+.main .main__content-title:active span {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_250_97279)'%3E%3Cpath d='M9 6.5L15 12L9 17.5' stroke='%23FF8E2A' stroke-width='1.5' stroke-linecap='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_250_97279'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }
 .main .main-popular {
   display: grid;
