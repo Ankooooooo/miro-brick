@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 0;
+  margin-bottom: 120px;
 
   .img {
     width: 100%;
@@ -37,6 +38,9 @@
     > li {
       width: calc((100% / 2) - 8px);
     }
+    .img {
+      height: 167px;
+    }
     .img__title {
       margin-top: 8px;
       font-size: 13px;
@@ -54,6 +58,9 @@
       font-size: 18px;
       font-weight: 700;
       line-height: 26px;
+    }
+    .img {
+      height: 197px;
     }
   }
 }
@@ -121,10 +128,7 @@
 @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
   .img__list {
     gap: 20px;
-
-    .img {
-      height: 213px;
-    }
+    margin-bottom: 0;
 
     // product list
     &.is-product {
@@ -133,6 +137,7 @@
         width: calc((100% / 4) - 15px);
       }
       .img {
+        height: 180px;
         border-radius: 8px;
       }
     }
@@ -142,6 +147,9 @@
       > li {
         width: calc((100% / 2) - 10px);
       }
+      .img {
+        height: 213px;
+      }  
       .img__title {
         font-size: 18px;
         font-weight: 700;
@@ -156,12 +164,29 @@
 @media screen and (min-width: #{$breakpoint-pc}) {
   .img__list {
     gap: 32px; 
+    margin-bottom: 0;
 
+    > li {
+      &:hover {
+        .img {
+          border: 2px solid #FF8E2A;
+        }
+        .img__title {
+          color: #FF8E2A;
+        }
+      }
+    }
     .img {
       height: 234px;
     }
-    .img__title {
-      line-height: 20px;
+    &.is-gallery,
+    &.is-product {
+      .img__title {
+        margin-top: 12px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+      }
     }
     .img__info {
       margin-top: 8px;
@@ -171,16 +196,11 @@
   
     // product list
     &.is-product {    
-      gap: 20px;
+      gap: 32px;
       padding: 0;
 
       > li {
-        width: calc((100% / 4) - 15px);
-      }
-      .img__title {
-        font-size: 15px;
-        font-weight: 600;
-        line-height: 20px;
+        width: calc((100% / 4) - 24px);
       }
       .img {
         height: 304px;
