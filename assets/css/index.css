@@ -2174,6 +2174,7 @@ main.main .main__content {
 }
 .board .board__detail .board__detailImg {
   margin-top: 2rem;
+  width: fit-content;
 }
 .board .board__detail .board__detailImg + p {
   margin-top: 2rem;
