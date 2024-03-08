@@ -2196,6 +2196,7 @@ main.main .main__content {
 .board .board__detail .board__detailFile .board__detailFileList li a {
   text-decoration: underline;
   font-size: 1.2rem;
+  pointer-events: none;
 }
 .board .board__detail .board__detailComment {
   margin-top: 4rem;

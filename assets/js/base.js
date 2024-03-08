@@ -265,8 +265,8 @@ window.addEventListener('load', function () {
 
 window.addEventListener('resize', function () {
     findViewPort();
-    headerFixedTop();
     changeDetailNavigation();
+    headerFixedTop();
 });
 
 window.addEventListener('scroll', function() {
