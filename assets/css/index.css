@@ -2078,7 +2078,7 @@ main.main .main__content {
   color: #888888;
   text-decoration: underline;
 }
-.board .board__info span.email a:hover {
+.board .board__info span.email a:hover, .board .board__info span.email a:active {
   color: #FF8E2A;
 }
 .board .board__info + .tag {
