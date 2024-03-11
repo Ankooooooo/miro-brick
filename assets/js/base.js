@@ -78,7 +78,22 @@ function handleOpenFootercontent() {
 
 // 뒤로가기
 function goback() {
-    window.history.back()
+    const org = window.location.origin + '/renew/';
+    const pathname = window.location.pathname.split('/').at(-1);
+    let result = 'index.php'
+
+    // home으로 이동할 경로 리스트
+    const home = ['product_list.php', 'gallery.php', 'notice.php', 'qna.php']
+
+    if ( pathname === 'product_view.php' ) { // 제품 상세보기 일 경우 제품 리스트로 이동
+        result = 'pages/product_list.php' + window.location.search;
+    } else if ( pathname === 'gallery_view.php' ) { // 갤러리 상세보기 일 경우 갤러리 리스트로 이동
+        result = 'pages/gallery.php' + window.location.search;
+    } else if ( pathname === 'qna_view.php' || pathname === 'qna_modify.php' || pathname === 'qna_view.php' ) {
+        result = 'pages/qna.php';
+    }
+
+    window.location.replace(org + result);
 };
 
 // 사이트 이동
