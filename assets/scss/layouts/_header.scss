@@ -59,6 +59,10 @@ header {
 
             li {
                 cursor: pointer;
+
+                &:hover a {
+                    color: $primary;
+                }
             }
             
             .selected a {

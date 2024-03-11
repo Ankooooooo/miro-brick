@@ -65,6 +65,21 @@
             @media screen and (min-width: #{$breakpoint-pc}) {
                 font-size: 16px;
                 line-height: 23.17px;
+
+                &:hover a {
+                    color: $primary;
+                }
+            }
+
+            // MO and Tablet
+            @media screen and (max-width: #{$breakpoint-pc - 1px}) {
+                &:active a {
+                    color: $primary;
+                }
+            }
+
+            a {
+               color: #111;
             }
             
             &.selected a {
