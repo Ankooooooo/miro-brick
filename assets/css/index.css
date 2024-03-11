@@ -1039,6 +1039,7 @@ body > footer .footer__content:not(.open) .footer__content-title:active::after {
   width: 100%;
   border-radius: 0.4rem;
   border: 0.1rem solid #E8E8E8;
+  font-size: 1.4rem;
   outline: none;
 }
 .form__input:focus,
@@ -2062,11 +2063,12 @@ main.main .main__content {
   background-color: #ddd;
   transform: translateY(-50%);
 }
-.board .board__info span.email {
-  text-decoration: underline;
-}
 .board .board__info span.email a {
   color: #888888;
+  text-decoration: underline;
+}
+.board .board__info span.email a:hover {
+  color: #FF8E2A;
 }
 .board .board__info + .tag {
   margin-top: 0.8rem;
@@ -2282,6 +2284,7 @@ main.main .main__content {
     left: auto;
     bottom: auto;
     padding: 0;
+    height: 4.8rem;
     justify-content: center;
     margin-top: 4rem;
     display: flex;

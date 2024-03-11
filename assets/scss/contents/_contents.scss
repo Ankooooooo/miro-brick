@@ -247,10 +247,13 @@ main {
             }
 
             &.email {
-                text-decoration: underline;
-
                 a {
                     color: $gray-888;
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: $primary;
+                    }
                 }
             }
         }
@@ -550,6 +553,7 @@ main {
             left: auto;
             bottom: auto;
             padding: 0;
+            height: 4.8rem;
             justify-content: center;
             margin-top: 4rem;
             display: flex;
