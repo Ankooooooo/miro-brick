@@ -78,19 +78,19 @@ function handleOpenFootercontent() {
 
 // 뒤로가기
 function goback() {
-    const org = window.location.origin + '/renew/';
+    // 운영페이지인지 확인
+    const isProd = window.location.host === 'miro-brick.com' ? true : false;
+    const org = isProd ? window.location.origin + '/renew/' : window.location.origin + '/';
     const pathname = window.location.pathname.split('/').at(-1);
-    let result = 'index.php'
+    const extension = window.location.host === 'miro-brick.com' ? '.php' : '.html'
+    let result = 'index' + extension;
 
-    // home으로 이동할 경로 리스트
-    const home = ['product_list.php', 'gallery.php', 'notice.php', 'qna.php']
-
-    if ( pathname === 'product_view.php' ) { // 제품 상세보기 일 경우 제품 리스트로 이동
-        result = 'pages/product_list.php' + window.location.search;
-    } else if ( pathname === 'gallery_view.php' ) { // 갤러리 상세보기 일 경우 갤러리 리스트로 이동
-        result = 'pages/gallery.php' + window.location.search;
-    } else if ( pathname === 'qna_view.php' || pathname === 'qna_modify.php' || pathname === 'qna_view.php' ) {
-        result = 'pages/qna.php';
+    if ( pathname === ('product_view' + extension) ) { // 제품 상세보기 일 경우 제품 리스트로 이동
+        result = 'pages/product_list' + extension + window.location.search;
+    } else if ( pathname === ('gallery_view' + extension) ) { // 갤러리 상세보기 일 경우 갤러리 리스트로 이동
+        result = 'pages/gallery' + extension + window.location.search;
+    } else if ( pathname === ('qna_view' + extension) || pathname === ('qna_modify' + extension) || pathname === ('qna_view' + extension) ) {
+        result = 'pages/qna' + extension;
     }
 
     window.location.replace(org + result);
