@@ -916,17 +916,6 @@ body > footer .footer__content:not(.open) .footer__content-title:active::after {
   transform: translateY(-50%);
   background-image: url("/assets/images/icon/icon-more-arrow.svg");
 }
-.btn.is-more:focus, .btn.is-more:active, .btn.is-more:hover {
-  background-color: #FF8E2A;
-  border-color: #FF8E2A;
-  color: #fff;
-}
-.btn.is-more:focus strong, .btn.is-more:active strong, .btn.is-more:hover strong {
-  color: #fff !important;
-}
-.btn.is-more:focus::after, .btn.is-more:active::after, .btn.is-more:hover::after {
-  background-image: url("/assets/images/icon/icon-more-arrow-white.svg");
-}
 @media screen and (min-width: 1312px) {
   .btn.is-more {
     height: 3.2rem;
@@ -939,6 +928,14 @@ body > footer .footer__content:not(.open) .footer__content-title:active::after {
   .btn.is-more::after {
     left: 1.6rem;
     background-image: url("/assets/images/icon/icon-more-plus.svg");
+  }
+  .btn.is-more:focus, .btn.is-more:active, .btn.is-more:hover {
+    background-color: #FF8E2A;
+    border-color: #FF8E2A;
+    color: #fff;
+  }
+  .btn.is-more:focus strong, .btn.is-more:active strong, .btn.is-more:hover strong {
+    color: #fff !important;
   }
   .btn.is-more:focus::after, .btn.is-more:active::after, .btn.is-more:hover::after {
     background-image: url("/assets/images/icon/icon-more-plus-white.svg");

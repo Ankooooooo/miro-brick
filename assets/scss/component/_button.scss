@@ -64,21 +64,21 @@
             background-image: url('/assets/images/icon/icon-more-arrow.svg');
         }
 
-        &:focus,
-        &:active,
-        &:hover {
-            background-color: $primary;
-            border-color: $primary;
-            color: #fff;
+        // &:focus,
+        // &:active,
+        // &:hover {
+        //     background-color: $primary;
+        //     border-color: $primary;
+        //     color: #fff;
 
-            strong {
-                color: #fff !important;
-            }
+        //     strong {
+        //         color: #fff !important;
+        //     }
 
-            &::after {
-                background-image: url('/assets/images/icon/icon-more-arrow-white.svg');
-            }
-        }
+        //     &::after {
+        //         background-image: url('/assets/images/icon/icon-more-arrow-white.svg');
+        //     }
+        // }
     }
 
 
@@ -102,9 +102,17 @@
             &:focus,
             &:active,
             &:hover {
-                &::after {
-                    background-image: url('/assets/images/icon/icon-more-plus-white.svg');
-                }
+              background-color: $primary;
+              border-color: $primary;
+              color: #fff;
+
+              strong {
+                  color: #fff !important;
+              }
+
+              &::after {
+                  background-image: url('/assets/images/icon/icon-more-plus-white.svg');
+              }
             }
         }
 
