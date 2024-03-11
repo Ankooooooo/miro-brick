@@ -167,6 +167,22 @@
   }
 }  
 
+
+@media screen and (max-width: 360px ) {
+  .img__list {
+    &.is-product {
+      .img {
+        height: 152px;
+      }
+    }
+    &.is-gallery {
+      .img {
+        height: 180px;
+      }
+    }
+  }
+}
+
 // Tablet
 @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
   .img__list {

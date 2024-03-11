@@ -1571,6 +1571,14 @@ input[type=file] {
   display: none;
 }
 
+@media screen and (max-width: 360px) {
+  .img__list.is-product .img {
+    height: 152px;
+  }
+  .img__list.is-gallery .img {
+    height: 180px;
+  }
+}
 @media screen and (min-width: 820px) and (max-width: 1311px) {
   .img__list {
     gap: 20px;
