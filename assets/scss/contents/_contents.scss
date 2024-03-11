@@ -251,7 +251,8 @@ main {
                     color: $gray-888;
                     text-decoration: underline;
 
-                    &:hover {
+                    &:hover,
+                    &:active {
                         color: $primary;
                     }
                 }
