@@ -16,7 +16,8 @@
 
     .header {
         border-bottom: 1px solid #eee;
-        position: fixed;
+        position: sticky;
+        z-index: 3;
 
         .category__title {
             font-size: 17px;
@@ -27,7 +28,7 @@
     }
 
     .category__menu {
-        margin-top: 52px;
+        // margin-top: 52px;
         min-height: calc(100% - 52px - 119px - 80px);
 
         // MO

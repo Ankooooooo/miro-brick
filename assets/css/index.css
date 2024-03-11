@@ -584,7 +584,8 @@ body > footer .footer__content:not(.open) .footer__content-title:active::after {
 }
 .category .header {
   border-bottom: 1px solid #eee;
-  position: fixed;
+  position: sticky;
+  z-index: 3;
 }
 .category .header .category__title {
   font-size: 17px;
@@ -593,7 +594,6 @@ body > footer .footer__content:not(.open) .footer__content-title:active::after {
   letter-spacing: -0.2px;
 }
 .category .category__menu {
-  margin-top: 52px;
   min-height: calc(100% - 52px - 119px - 80px);
 }
 @media screen and (max-width: 819px) {
