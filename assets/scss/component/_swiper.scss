@@ -103,6 +103,8 @@
     @media screen and (min-width: #{$breakpoint-pc}) {
       margin: -4rem 0 0 0;
       padding: 0;
+      border-radius: 2.4rem;
+
       .swiper-wrapper {
         height: 60rem;
       }
@@ -137,16 +139,6 @@
 
     .swiper-slide {
       width: 20.8rem !important;
-
-      &:hover {
-        .main-gallery__image {
-          border: 0.2rem solid #FF8E2A; 
-        }
-
-        .main-gallery__title {
-          color: #FF8E2A;
-        }
-      }
 
       .main-gallery__image {
         overflow: hidden;
@@ -230,6 +222,16 @@
 
       .swiper-slide {
         width: 27.6rem !important;
+
+        &:hover {
+          .main-gallery__image {
+            border: 0.2rem solid #FF8E2A; 
+          }
+  
+          .main-gallery__title {
+            color: #FF8E2A;
+          }
+        }
   
         .main-gallery__image {
           height: 35.2rem !important;
@@ -239,7 +241,13 @@
       .swiper-button-next,
       .swiper-button-prev {
         display: block;
+
+        &.swiper-button-disabled {
+          opacity: 0.3 !important;
+        }
       }
+
+      
     }
   }
 
