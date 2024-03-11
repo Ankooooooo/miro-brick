@@ -7,7 +7,7 @@
     
     // Tablet
     @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-pc - 1px}) {
-        padding: 0 28px;
+        // padding: 0 28px;
     }
 
     // MO and Tablet
@@ -43,6 +43,7 @@
         @media screen and (max-width: #{$breakpoint-pc - 1px}) {
             gap: 20px;
             width: 100%;
+            padding: 0 28px;
         }
         
         // PC

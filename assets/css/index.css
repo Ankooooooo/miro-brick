@@ -711,11 +711,6 @@ body > footer .footer__content:not(.open) .footer__content-title:active::after {
   z-index: 2;
   transition: all 0.3s;
 }
-@media screen and (min-width: 820px) and (max-width: 1311px) {
-  .navigation {
-    padding: 0 28px;
-  }
-}
 @media screen and (max-width: 1311px) {
   .navigation {
     height: 48px;
@@ -747,6 +742,7 @@ body > footer .footer__content:not(.open) .footer__content-title:active::after {
   .navigation .navigation__list {
     gap: 20px;
     width: 100%;
+    padding: 0 28px;
   }
 }
 @media screen and (min-width: 1312px) {
