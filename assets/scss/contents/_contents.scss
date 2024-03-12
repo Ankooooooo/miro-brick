@@ -95,7 +95,7 @@ main {
         width: $breakpoint-pc;
         margin: auto;
         padding: 4rem 0;
-        min-height: calc(100vh - 535px);
+        // min-height: calc(100vh - 535px);
         
         &.main {
             .tel__info {
