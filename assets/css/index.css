@@ -1737,8 +1737,10 @@ input[type=file] {
   margin-top: 20px;
 }
 .img__view .view__img .img {
+  max-width: 800px;
   width: 100%;
   height: auto;
+  margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
 }
